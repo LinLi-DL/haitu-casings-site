@@ -1,0 +1,64 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+const product = { title: 'HT Barrier Pearl — Pearlescent High-Barrier Casing', image: '/images/ht-barrier-pearl.jpg' };
+---
+<SiteLayout lang="en" title="HT Barrier Pearl — Pearlescent High-Barrier Casing | Haitu Casing" description="Three-layer high-barrier polymer casing with a pearlescent apricot finish.">
+  <section class="page-intro product-detail-intro">
+    <p class="eyebrow"><a href="/en/plastic-casings/">Plastic Casings</a> / High-Barrier Casings</p>
+    <h1>HT Barrier Pearl — Pearlescent High-Barrier Casing</h1>
+    <p>Three-layer high-barrier polymer casing with a pearlescent apricot finish.</p>
+  </section>
+  <section class="content-section product-detail-layout">
+    <div class="product-detail-image"><img src="/images/ht-barrier-pearl.jpg" alt="HT Barrier Pearl — Pearlescent High-Barrier Casing product sample" /></div>
+    <div class="product-detail-copy">
+      <p class="eyebrow">Product Description</p>
+      <h2>Designed around your processing needs</h2>
+      <p>HT Barrier Pearl is described in the Haitu catalog as a three-layer high-barrier polymer casing with a pearlescent apricot finish, developed for thin sausage products.</p>
+      <h2>Application</h2>
+      <p>Thin sausages, including frankfurters and mini-sausages.</p>
+      <a class="button button-red" href="/en/contact-us/">Request product details →</a>
+    </div>
+  </section>
+  <section class="content-section product-detail-sections">
+    <h2>Key Features</h2>
+    <ul class="feature-list">
+        <li>Pearlescent apricot surface with a soft premium sheen</li>
+        <li>Barrier against oxygen and moisture, helping to reduce weight loss and maintain product quality</li>
+        <li>Mechanical strength and controlled shrinkage for stable shape after thermal processing</li>
+        <li>Suitable for multi-color printing</li>
+        <li>The supplied catalog lists stable mass production for 32/34 mm</li>
+    </ul>
+    <h2>Available Specifications</h2>
+    <div class="spec-table-wrap"><table class="spec-table"><tbody>
+        <tr><th>Flat width</th><td>29–45 mm</td></tr>
+        <tr><th>Type</th><td>High-barrier, 3-layer</td></tr>
+        <tr><th>Surface</th><td>Pearlescent apricot</td></tr>
+        <tr><th>Printing</th><td>Up to 12 colors</td></tr>
+        <tr><th>Supply form</th><td>Rolls or shirred</td></tr>
+    </tbody></table></div>
+    <h2>Composition & Technical Information</h2>
+    <p>The supplied product catalog does not specify the complete polymer composition or layer structure for this model. Please contact Haitu to confirm the current technical data sheet and any application-specific requirements.</p>
+    <h2>Supply & Packaging</h2>
+    <p>The supply forms listed for this model are shown in the specification table above. Please confirm shirring format, roll details, carton packing, and order quantity when requesting a quotation.</p>
+    <div class="spec-note">The catalog specifically notes stable mass production for 32/34 mm. Confirm other calibers and exact order specifications before quotation.</div>
+  </section>
+  <section class="cta"><div><h2>Need specifications or a quotation?</h2><p>Tell us your sausage type, target caliber, printing and packing requirements.</p></div><a class="button button-red" href="/en/contact-us/">Contact Haitu Casing →</a></section>
+</SiteLayout>
+<style>
+.product-detail-intro .eyebrow a { color: var(--red); }
+.product-detail-layout { display:grid; grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr); gap:44px; align-items:start; max-width:1400px; }
+.product-detail-image { background:#f8f8f6; border:1px solid var(--line); border-radius:16px; overflow:hidden; }
+.product-detail-image img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; }
+.product-detail-copy h2, .product-detail-sections h2 { color:var(--navy); margin:0 0 12px; font-size:clamp(23px,2.4vw,30px); }
+.product-detail-copy h2:not(:first-of-type), .product-detail-sections h2:not(:first-child) { margin-top:32px; }
+.product-detail-copy p, .product-detail-sections p { color:var(--muted); line-height:1.75; }
+.product-detail-copy .button { margin-top:10px; }
+.product-detail-sections { padding-top:10px; max-width:1100px; }
+.feature-list { padding-left:22px; color:var(--muted); line-height:1.8; }
+.spec-table-wrap { overflow-x:auto; margin:18px 0 28px; }
+.spec-table { width:100%; border-collapse:collapse; border:1px solid var(--line); }
+.spec-table th, .spec-table td { padding:13px 16px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+.spec-table th { width:32%; color:var(--navy); background:#f8f9fa; }
+.spec-table td { color:var(--muted); }
+@media(max-width:720px) { .product-detail-layout { grid-template-columns:1fr; gap:24px; } }
+</style>

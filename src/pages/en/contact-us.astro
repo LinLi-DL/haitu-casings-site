@@ -1,0 +1,15 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+---
+<SiteLayout lang="en" title="Contact Us | Haitu Casing" description="Contact Haitu Technology for plastic casing product information and B2B quotations.">
+  <section class="page-intro"><p class="eyebrow">Contact Haitu Casing</p><h1>Let's discuss your casing requirements</h1><p>Tell us about your sausage product, target caliber, preferred finish, printing, supply form and estimated quantity. We will confirm the relevant model details for your inquiry.</p></section>
+  <section class="content-section"><div class="contact-layout"><div class="contact-card"><h2>Business Inquiries</h2><p><strong>Company:</strong> Haitu Technology Co., Ltd.</p><p><strong>Product brand:</strong> Haitu Casing</p><p><strong>Phone / WhatsApp:</strong><br/><a href="tel:+8618561719122">+86 185 6171 9122</a><br/><a href="tel:+8615092056506">+86 150 9205 6506</a></p><p><strong>Email:</strong><br/><a href="mailto:maksimljc@163.com">maksimljc@163.com</a><br/><a href="mailto:ll198196@163.com">ll198196@163.com</a></p><p><strong>Address:</strong><br/>Building 7, No. 20 Yuying Road, Shangma Street, Chengyang, Qingdao, China</p></div><div class="contact-note"><h2>For a faster quotation</h2><p>Please include as many of these details as you have:</p><ul><li>Sausage type and processing method</li><li>Target caliber or flat width</li><li>Surface finish, color and printing</li><li>Shirred or roll supply form</li><li>Estimated order quantity and destination country</li></ul><p>We will confirm any specifications not listed in the catalog before quotation.</p></div></div></section>
+</SiteLayout>
+<style>
+.contact-layout {{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:24px; max-width:1150px; }}
+.contact-layout h2 {{ color:var(--navy); }}
+.contact-layout p, .contact-layout li {{ color:var(--muted); line-height:1.75; }}
+.contact-layout a {{ color:var(--red); }}
+.contact-note {{ background:#f8f9fa; border-radius:12px; padding:24px; }}
+@media(max-width:720px) {{ .contact-layout {{ grid-template-columns:1fr; }} }}
+</style>

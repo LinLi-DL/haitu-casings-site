@@ -1,0 +1,21 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+---
+<SiteLayout lang="en" title="About Haitu Technology | Haitu Casing" description="Learn about Haitu Technology's polymer casing product range and B2B supply approach.">
+  <section class="page-intro"><p class="eyebrow">About Haitu Technology</p><h1>Consistent Quality. Practical Solutions.</h1><p>Haitu Casing is the product brand of Haitu Technology. Our plastic casing catalog is focused on polymer casings for the meat processing industry, with smoke-permeable and high-barrier options for different product and processing needs.</p></section>
+  <section class="content-section about-layout">
+    <div><h2>Our Product Focus</h2><p>The supplied HT Plastic Casing V2.0 catalog lists six product families: HT Barrier Matte, HT Barrier Soft Matte, HT Barrier Pearl, HT Smoke, HT Peel and HT Standard. Applications range from cooked sausages and hams to semi-smoked products, frankfurters and mini-sausages, depending on the model.</p><h2>How We Work</h2><p>We focus on practical product selection and clear specification confirmation. For each inquiry, we can discuss the sausage type, target caliber, surface finish, printing, supply form and estimated quantity. Exact details are confirmed for the selected model before quotation.</p><h2>Product Range</h2><p>Plastic Casings · Collagen Casings · Cellulose Casings</p><a class="button button-red" href="/en/contact-us/">Discuss your requirements →</a></div>
+    <figure><img src="/images/ht-printed-casing.jpg" alt="Printed Haitu plastic casing sample" loading="lazy"/><figcaption>Printed plastic casing sample shown in the Haitu product catalog.</figcaption></figure>
+  </section>
+  <section class="content-section"><div class="spec-note">The company background and product statements on this page are based on the supplied Haitu product catalog. Please confirm any certification, regulatory compliance, production capacity or other formal claims before adding them to the public website.</div></section>
+</SiteLayout>
+<style>
+.about-layout {{ display:grid; grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr); gap:42px; align-items:start; max-width:1300px; }}
+.about-layout h2 {{ color:var(--navy); margin:28px 0 10px; }}
+.about-layout h2:first-child {{ margin-top:0; }}
+.about-layout p {{ color:var(--muted); line-height:1.75; }}
+.about-layout figure {{ margin:0; }}
+.about-layout figure img {{ width:100%; border-radius:14px; }}
+.about-layout figcaption {{ color:var(--muted); font-size:12px; margin-top:8px; line-height:1.5; }}
+@media(max-width:720px) {{ .about-layout {{ grid-template-columns:1fr; gap:24px; }} }}
+</style>

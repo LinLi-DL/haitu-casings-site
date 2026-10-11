@@ -1,0 +1,30 @@
+HAITU WEBSITE CONTENT UPDATE BATCH
+
+This is a PATCH for the existing Astro project, not a complete website project.
+Copy the included files into the matching paths in your current project. Do not replace the whole project folder.
+
+UPDATED PAGES
+- src/pages/en/index.astro
+- src/pages/en/about-us.astro
+- src/pages/en/plastic-casings.astro
+- src/pages/en/contact-us.astro
+
+PRODUCT DETAIL PAGES
+- src/pages/en/plastic-casings/smoke-permeable-easy-peel.astro
+- src/pages/en/plastic-casings/ht-smoke.astro
+- src/pages/en/plastic-casings/ht-barrier-matte.astro
+- src/pages/en/plastic-casings/ht-barrier-soft-matte.astro
+- src/pages/en/plastic-casings/ht-barrier-pearl.astro
+- src/pages/en/plastic-casings/ht-standard.astro
+
+IMAGES
+Seven product photos were extracted from the user-provided HT Plastic Casing V2.0 PDF and copied into public/images/.
+
+CONTENT NOTES
+- Product descriptions and listed specifications follow the supplied HT Plastic Casing V2.0 PDF.
+- Fast-Peel and Frosted were not listed as standalone product models in that PDF, so the catalog instead uses the documented HT Smoke, HT Peel, HT Barrier Matte, HT Barrier Soft Matte, HT Barrier Pearl and HT Standard names.
+- The PDF says HT Peel is available in barrier or smoke-permeable versions. The detail page here focuses on the smoke-permeable easy-peel version.
+- Full polymer composition/layer structure is not specified for most models in the supplied PDF; the pages say to request the current technical information rather than inventing it.
+- Collagen and cellulose pages were not changed because the supplied PDF only documents plastic casings.
+
+After copying, run `npm.cmd run dev` from the project root and test the homepage, Plastic Casings listing, all product links, and Contact Us.

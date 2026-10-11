@@ -1,0 +1,20 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+const smoke = [
+ { id: 'smoke-easy-peel', title: 'Паропроницаемые оболочки с лёгким снятием', text: 'Вариант для покупателей, которым важно удобное снятие оболочки. Уточните доступный калибр и условия обработки.' },
+ { id: 'smoke-fast-peel', title: 'Паропроницаемые оболочки для быстрого снятия', text: 'Вариант серии с учётом требований к снятию оболочки. Точные характеристики подтверждаются для каждой модели.' },
+];
+const barrier = [
+ { id: 'matte-small-caliber', title: 'Матовая поверхность · малый калибр', text: 'Матовая поверхность для отдельных видов колбасной продукции. Цвета и размеры уточняются.' },
+ { id: 'frosted-small-caliber', title: 'Морозная поверхность · малый калибр', text: 'Вариант внешнего оформления для покупателей, сравнивающих разные виды оболочки.' },
+ { id: 'pearl-small-caliber', title: 'Перламутровая поверхность · малый калибр', text: 'Перламутровый внешний вид для отдельных продуктов. Уточните доступные цвета и калибры.' },
+];
+---
+<SiteLayout lang="ru" title="Пластиковые оболочки | Haitu Casing" description="Паропроницаемые и высокобарьерные пластиковые оболочки для колбасных изделий.">
+ <section class="page-intro"><p class="eyebrow">Основная продукция</p><h1>Пластиковые оболочки</h1><p>Две основные серии: паропроницаемые оболочки и высокобарьерные оболочки. Подбор можно обсудить с учётом поверхности, требований к снятию, калибра, печати и упаковки.</p></section>
+ <section class="content-section" style="max-width:none"><div class="series-block" id="smoke-permeable"><div class="series-heading"><div><p class="eyebrow">Серия 01</p><h2>Паропроницаемые оболочки</h2><p>Выберите вариант с учётом требований к снятию оболочки. Условия обработки и точные характеристики подтверждаются для каждой модели.</p></div></div><div class="catalog-grid">{smoke.map((p) => <article class="catalog-card"><a href={`#${p.id}`}><img src="/images/plastic-casings-preview.jpg" alt={p.title} loading="lazy" /></a><div class="catalog-card-copy"><h3>{p.title}</h3><p>{p.text}</p><a class="text-link" href={`#${p.id}`}>Подробнее →</a></div></article>)}</div></div>
+ <div class="series-block" id="high-barrier"><div class="series-heading"><div><p class="eyebrow">Серия 02</p><h2>Высокобарьерные оболочки</h2><p>Популярные варианты внешнего вида в малом калибре: матовый, морозный и перламутровый. Доступные характеристики уточняются по запросу.</p></div></div><div class="catalog-grid">{barrier.map((p) => <article class="catalog-card"><a href={`#${p.id}`}><img src="/images/plastic-casings-preview.jpg" alt={p.title} loading="lazy" /></a><div class="catalog-card-copy"><h3>{p.title}</h3><p>{p.text}</p><a class="text-link" href={`#${p.id}`}>Подробнее →</a></div></article>)}</div></div>
+ <h2>Характеристики и запрос цены</h2><p class="catalog-intro">Для расчёта стоимости укажите калибр, цвет или тип поверхности, печать, формат упаковки, предполагаемый объём и условия обработки.</p>
+ {[...smoke,...barrier].map((p) => <section id={p.id} class="contact-card" style="margin:22px 0;scroll-margin-top:30px"><h2>{p.title}</h2><p>{p.text}</p><a class="button button-red" href="/ru/kontakty/">Запросить характеристики и цену →</a></section>)}
+ <div class="spec-note">Перед публикацией необходимо проверить названия моделей, характеристики и заявленные свойства.</div></section>
+</SiteLayout>
