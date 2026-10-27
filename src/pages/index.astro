@@ -1,20 +1,271 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { productCategories } from '../data/products';
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0;url=/en/" />
-    <title>Haitu Casing</title>
-    <link rel="canonical" href="https://haitucasing.com/en/" />
-    <script>
-      window.location.replace('/en/');
-    </script>
-  </head>
-  <body>
-    <p>
-      Redirecting to
-      <a href="/en/">Haitu Casing English website</a>...
-    </p>
-  </body>
-</html>
+const slides = [
+  {
+    image: '/images/about-factory.jpg',
+    alt: 'Sausage casing production and processing facilities',
+    eyebrow: 'MANUFACTURING & SUPPLY',
+    title: 'Producing with Purpose. Supplying with Precision.',
+    text: 'Specialized production resources for polyamide and collagen casings, combined with coordinated supply solutions for sausage and meat processing manufacturers.',
+    href: '/en/about-us/',
+    link: 'Discover Haitu',
+    tone: 'light',
+  },
+  {
+    image: '/images/ht-plastic-casing.jpg',
+    alt: 'Smoked sausages made with smoke-permeable plastic casings',
+    eyebrow: 'SPECIALTY POLYAMIDE CASINGS',
+    title: 'Specialty Polyamide Casings for Demanding Applications',
+    text: 'From smoke-permeable casings to high-barrier matte finishes and custom printing, we help manufacturers match casing performance and appearance to their products and processing requirements.',
+    href: '/en/plastic-casings/',
+    link: 'Explore Polyamide Casings',
+    tone: 'dark',
+  },
+  {
+    image: '/images/about-logistics.jpg',
+    alt: 'Casing products prepared for international shipment',
+    eyebrow: 'ONE-STOP CASING SUPPLY',
+    title: 'Complete Casing Solutions. Connected to Global Markets.',
+    text: 'With international trade experience across Russia, Central Asia and North America, we coordinate casing supply, export documentation and shipping to support customers across markets.',
+    href: '/en/contact-us/',
+    link: 'Discuss Your Requirements',
+    tone: 'light',
+  },
+];
+
+const products = productCategories;
+---
+
+<SiteLayout lang="en" title="Haitu Casing | Sausage Casings for Food Processors" description="Haitu Technology supplies polyamide, collagen, cellulose and fibrous casings, with specialized production partners and export coordination from Qingdao, China.">
+  <section class="hero-carousel" data-hero-carousel aria-label="Haitu manufacturing, specialty casings and global supply">
+    {slides.map((slide, index) => (
+      <article class:list={['hero-slide', slide.tone === 'dark' && 'hero-slide-dark', index === 0 && 'is-active']} data-hero-slide aria-hidden={index === 0 ? 'false' : 'true'}>
+        <img class="hero-slide-image" src={slide.image} alt={slide.alt} fetchpriority={index === 0 ? 'high' : 'auto'} />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="hero-eyebrow">{slide.eyebrow}</p>
+          <h1>{slide.title}</h1>
+          <p class="hero-description">{slide.text}</p>
+          <a class="button button-red hero-link" href={slide.href}>{slide.link} <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    ))}
+    <button class="hero-arrow hero-prev" type="button" data-hero-prev aria-label="Previous product">‹</button>
+    <button class="hero-arrow hero-next" type="button" data-hero-next aria-label="Next product">›</button>
+    <div class="hero-pagination" aria-label="Choose featured product">
+      {slides.map((slide, index) => <button type="button" class="hero-dot" data-hero-dot aria-label={`Show ${slide.title}`} aria-current={index === 0 ? 'true' : 'false'}></button>)}
+    </div>
+  </section>
+
+  <section class="about-home" aria-labelledby="about-title">
+    <div class="about-image-wrap" data-about-carousel aria-label="Haitu operations and services">
+      <div class="about-image-slide is-active" data-about-slide aria-hidden="false">
+        <img src="/images/about-factory-outside.jpg" alt="Haitu partner factory and casing production resources" loading="lazy" />
+        <span class="about-image-caption">Manufacturing Resources</span>
+      </div>
+      <div class="about-image-slide" data-about-slide aria-hidden="true">
+        <img src="/images/about-equipment.jpg" alt="Equipment used in sausage casing production and processing" loading="lazy" />
+        <span class="about-image-caption">Production Technology</span>
+      </div>
+      <div class="about-image-controls" aria-label="About images">
+        <button type="button" data-about-prev aria-label="Previous About image">‹</button>
+        <div class="about-image-dots">
+          <button type="button" data-about-dot aria-label="Show manufacturing image" aria-current="true"></button>
+          <button type="button" data-about-dot aria-label="Show production technology image" aria-current="false"></button>
+        </div>
+        <button type="button" data-about-next aria-label="Next About image">›</button>
+      </div>
+    </div>
+
+    <div class="about-strengths">
+      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/production-partners.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Manufacturing Strength</h3><p>Professional production lines, modern production equipment and sufficient production capacity for plastic and collagen casings.</p></div></article>
+      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/premium-quality.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Technology & Innovation</h3><p>Specialty casing development, advanced printing capabilities and continued improvement of casing performance.</p></div></article>
+      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/casing-portfolio.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Professional Team & Technical Support</h3><p>Our sales and technical support team assists with product selection, specifications, processing questions and follow-up.</p></div></article>
+      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/export-service.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Global Trade & Supply Solutions</h3><p>International order coordination and export service for customers in Russia, Central Asia and North America.</p></div></article>
+    </div>
+
+    <div class="about-copy">
+      <p class="eyebrow">ABOUT HAITU</p>
+      <h2 id="about-title">Producing & Providing. Your Partner in Casing Solutions.</h2>
+      <p>Haitu Technology is a casing company integrating R&D, production and sales, providing high-quality casing products for sausage manufacturers worldwide. We focus on reliable manufacturing, practical technical support and long-term customer relationships.</p>
+      <p>Our four core strengths are manufacturing, technology and innovation, professional technical support, and global trade. Polyamide casings are a key focus, alongside collagen casings and coordinated supply of cellulose and fibrous casings. Selected specialty products remain under development and are introduced only when ready for customer application.</p>
+      <a class="button button-red" href="/en/about-us/">Learn More About Us <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="products-home" id="products">
+    <div class="section-heading"><div><p class="eyebrow">OUR PRODUCTS</p><h2>Our Product Categories</h2><p class="section-intro">Specialty polyamide casings, collagen casings and coordinated supply for sausage and meat processors.</p></div></div>
+    <div class="product-list">{products.map((p, i) => <article class="product-row"><a class="product-image-link" href={p.href} aria-label={`Explore ${p.title}`}><img src={p.image} alt={p.title} loading="lazy" /></a><div class="product-row-copy"><p class="product-number">{String(i + 1).padStart(2, '0')} <span aria-hidden="true">/</span> PRODUCT CATEGORY</p><h3><a href={p.href}>{p.title}</a></h3><p class="product-description">{p.description}</p><a class="text-link" href={p.href}>Explore Category <span aria-hidden="true">→</span></a></div><a class="product-row-arrow" href={p.href} aria-label={`Explore ${p.title}`}><span aria-hidden="true">↗</span></a></article>)}</div>
+  </section>
+
+  <section class="home-cta"><div><p class="eyebrow">LET'S TALK ABOUT YOUR REQUIREMENTS</p><h2>Looking for the right casing solution?</h2><p>Tell us about your product, target caliber, printing and supply requirements.</p></div><a class="button button-red" href="/en/contact-us/">Contact Haitu <span aria-hidden="true">→</span></a></section>
+</SiteLayout>
+
+<script>
+  const carousel = document.querySelector('[data-hero-carousel]');
+  if (carousel) {
+    const slides = Array.from(carousel.querySelectorAll('[data-hero-slide]'));
+    const dots = Array.from(carousel.querySelectorAll('[data-hero-dot]'));
+    const prev = carousel.querySelector('[data-hero-prev]');
+    const next = carousel.querySelector('[data-hero-next]');
+    let active = 0;
+    let timer;
+    const show = (index) => {
+      active = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('is-active', i === active);
+        slide.setAttribute('aria-hidden', i === active ? 'false' : 'true');
+      });
+      dots.forEach((dot, i) => dot.setAttribute('aria-current', i === active ? 'true' : 'false'));
+    };
+    const restart = () => {
+      window.clearInterval(timer);
+      timer = window.setInterval(() => show(active + 1), 6000);
+    };
+    dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); restart(); }));
+    prev?.addEventListener('click', () => { show(active - 1); restart(); });
+    next?.addEventListener('click', () => { show(active + 1); restart(); });
+    carousel.addEventListener('mouseenter', () => window.clearInterval(timer));
+    carousel.addEventListener('mouseleave', restart);
+    restart();
+  }
+
+  // About image carousel: two images, independent from the main hero carousel.
+  const aboutCarousel = document.querySelector('[data-about-carousel]');
+  if (aboutCarousel) {
+    const aboutSlides = Array.from(aboutCarousel.querySelectorAll('[data-about-slide]'));
+    const aboutDots = Array.from(aboutCarousel.querySelectorAll('[data-about-dot]'));
+    const aboutPrev = aboutCarousel.querySelector('[data-about-prev]');
+    const aboutNext = aboutCarousel.querySelector('[data-about-next]');
+    let aboutActive = 0;
+    let aboutTimer;
+
+    const showAboutSlide = (index) => {
+      aboutActive = (index + aboutSlides.length) % aboutSlides.length;
+      aboutSlides.forEach((slide, i) => {
+        slide.classList.toggle('is-active', i === aboutActive);
+        slide.setAttribute('aria-hidden', i === aboutActive ? 'false' : 'true');
+      });
+      aboutDots.forEach((dot, i) => dot.setAttribute('aria-current', i === aboutActive ? 'true' : 'false'));
+    };
+    const restartAboutTimer = () => {
+      window.clearInterval(aboutTimer);
+      aboutTimer = window.setInterval(() => showAboutSlide(aboutActive + 1), 5000);
+    };
+    aboutDots.forEach((dot, i) => dot.addEventListener('click', () => { showAboutSlide(i); restartAboutTimer(); }));
+    aboutPrev?.addEventListener('click', () => { showAboutSlide(aboutActive - 1); restartAboutTimer(); });
+    aboutNext?.addEventListener('click', () => { showAboutSlide(aboutActive + 1); restartAboutTimer(); });
+    aboutCarousel.addEventListener('mouseenter', () => window.clearInterval(aboutTimer));
+    aboutCarousel.addEventListener('mouseleave', restartAboutTimer);
+    restartAboutTimer();
+  }
+</script>
+
+<style>
+.hero-carousel{position:relative;height:clamp(430px,36vw,560px);min-height:430px;overflow:hidden;background:#f8f5f0;color:#fff}
+.hero-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity .65s ease;isolation:isolate}
+.hero-slide.is-active{opacity:1;visibility:visible;z-index:1}
+.hero-slide-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2}
+.hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(31,25,20,.72) 0%,rgba(43,31,23,.48) 40%,rgba(36,28,20,.08) 78%)}
+.hero-slide-dark .hero-shade{background:linear-gradient(90deg,rgba(28,22,19,.78) 0%,rgba(44,27,20,.46) 43%,rgba(28,21,17,.08) 82%)}
+.hero-content{position:relative;width:min(790px,62vw);padding:clamp(54px,6.5vw,88px) 0 76px clamp(28px,6.3vw,96px)}
+.hero-eyebrow,.eyebrow{margin:0 0 14px;color:var(--orange);font-size:12px;font-weight:800;letter-spacing:1.7px;text-transform:uppercase}
+.hero-content h1{margin:0 0 20px;font-size:clamp(36px,3.1vw,48px);line-height:1.12;letter-spacing:-.7px;max-width:740px;color:#fff;text-wrap:balance}
+.hero-description{max-width:500px;margin:0 0 27px;color:rgba(255,255,255,.96);font-size:clamp(15px,1.12vw,17px);line-height:1.7}
+.hero-link{display:inline-flex;align-items:center;gap:14px}.hero-arrow{position:absolute;z-index:3;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:40px;height:40px;padding:0;border:1px solid rgba(255,255,255,.8);border-radius:50%;background:rgba(255,255,255,.92);color:var(--red);font-size:28px;line-height:1;cursor:pointer;box-shadow:0 3px 16px #0001}.hero-prev{left:18px}.hero-next{right:18px}.hero-arrow:hover{background:var(--orange);color:white;border-color:var(--orange)}
+.hero-pagination{position:absolute;z-index:4;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:10px}.hero-dot{width:10px;height:10px;padding:0;border:1px solid white;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer}.hero-dot[aria-current="true"]{width:27px;border-radius:8px;background:var(--orange);border-color:var(--orange)}
+.about-home{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);grid-template-rows:auto auto;gap:clamp(24px,3vw,42px);align-items:center;padding:58px clamp(24px,6vw,92px);background:#fff}
+.about-copy{grid-column:1 / -1;grid-row:2;max-width:none;width:100%;padding-top:4px}
+.about-copy h2,.products-home h2,.home-cta h2{margin:0 0 18px;color:var(--navy);font-size:clamp(28px,3vw,40px);line-height:1.14;letter-spacing:-.7px}.about-copy>p:not(.eyebrow){font-size:14px;line-height:1.75;color:var(--muted)}.about-copy .button{margin-top:12px}
+.about-strengths{grid-column:2;grid-row:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,2.4vw,34px) 22px;align-content:center;min-width:0}.strength{display:flex;align-items:flex-start;gap:10px;min-width:0}.strength-icon{display:flex;flex:0 0 40px;width:40px;height:40px;align-items:center;justify-content:center;border-radius:12px;background:#fff2e8;color:var(--red)}.strength-icon img{display:block;width:23px;height:23px;object-fit:contain}.strength h3{margin:2px 0 6px;color:var(--navy);font-size:14px;line-height:1.3}.strength p{margin:0;color:var(--muted);font-size:11px;line-height:1.55}
+/* About image carousel — keeps the original warm red/orange brand styling */
+.about-image-wrap{
+  height:clamp(250px,25vw,340px);
+  overflow:hidden;
+  border-radius:5px 48px 5px 5px;
+  position:relative;
+  isolation:isolate;
+  background:#fff5ec;
+}
+.about-image-slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .55s ease;
+}
+.about-image-slide.is-active{opacity:1;visibility:visible;z-index:1}
+.about-image-slide img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  clip-path:polygon(7.5% 0,100% 0,100% 100%,0 100%);
+}
+/* A slim diagonal accent, not a full-size backing panel */
+.about-image-slide::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  background:linear-gradient(160deg,#f8b15f 0%,var(--orange) 55%,var(--red) 100%);
+  clip-path:polygon(5.8% 0,7.5% 0,0 100%,0 100%);
+}
+.about-image-caption{
+  position:absolute;
+  z-index:3;
+  left:24px;
+  bottom:22px;
+  padding:9px 13px;
+  border-radius:5px;
+  color:#fff;
+  background:linear-gradient(90deg,rgba(49,31,22,.72),rgba(49,31,22,.18));
+  font-size:12px;
+  font-weight:750;
+  letter-spacing:.4px;
+  text-shadow:0 1px 3px #0005;
+}
+.about-image-controls{
+  position:absolute;
+  z-index:4;
+  right:14px;
+  bottom:14px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+.about-image-controls>button{
+  display:grid;
+  place-items:center;
+  width:30px;
+  height:30px;
+  padding:0;
+  border:1px solid #fff9;
+  border-radius:50%;
+  color:var(--red);
+  background:rgba(255,255,255,.92);
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+}
+.about-image-controls>button:hover{color:#fff;background:var(--orange);border-color:var(--orange)}
+.about-image-dots{display:flex;align-items:center;gap:6px}
+.about-image-dots button{
+  width:7px;
+  height:7px;
+  padding:0;
+  border:1px solid #fff;
+  border-radius:50%;
+  background:#ffffff80;
+  cursor:pointer;
+}
+.about-image-dots button[aria-current="true"]{background:var(--orange);border-color:#fff;width:18px;border-radius:5px}
+.products-home{padding:58px clamp(24px,6vw,92px) 70px;background:#fffaf6}.section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:28px}.products-home h2{margin-bottom:8px}.section-intro{margin:0;color:var(--muted);font-size:14px}.product-list{display:grid;grid-template-columns:1fr;gap:0;border-top:1px solid #eadfd6}.product-row{position:relative;display:grid;grid-template-columns:minmax(190px,26%) minmax(0,1fr) 42px;align-items:center;gap:clamp(22px,3.4vw,48px);min-height:235px;padding:22px 12px;border-bottom:1px solid #eadfd6;background:transparent;transition:background .2s}.product-row:hover{background:#fff}.product-image-link{display:block;height:158px;overflow:hidden;border-radius:7px;background:#f4eee8}.product-image-link img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}.product-row:hover .product-image-link img{transform:scale(1.035)}.product-row-copy{min-width:0;padding:4px 0}.product-number{margin:0 0 9px;color:var(--red);font-size:10px;font-weight:800;letter-spacing:1.5px}.product-number span{padding:0 5px;color:#d9b8a6}.product-row h3{margin:0 0 10px;font-size:clamp(20px,2vw,25px);line-height:1.2;letter-spacing:-.3px;color:var(--navy)}.product-row h3 a{color:inherit;text-decoration:none}.product-row h3 a:hover{color:var(--red)}.product-description{max-width:690px;margin:0 0 14px;color:var(--muted);font-size:14px;line-height:1.7}.text-link{color:var(--red);font-size:13px;font-weight:750;text-decoration:none}.text-link span{display:inline-block;margin-left:3px;transition:transform .2s}.text-link:hover{color:var(--orange)}.text-link:hover span{transform:translateX(4px)}.product-row-arrow{display:flex;width:38px;height:38px;align-items:center;justify-content:center;border:1px solid #ead7cb;border-radius:50%;color:var(--red);font-size:20px;text-decoration:none;transition:background .2s,color .2s,border-color .2s}.product-row:hover .product-row-arrow{background:var(--red);border-color:var(--red);color:#fff}
+.home-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:35px clamp(24px,6vw,92px);background:#fff; border-top:1px solid #f1e7df}.home-cta h2{margin-bottom:8px;font-size:clamp(24px,2.4vw,32px)}.home-cta p:not(.eyebrow){margin:0;color:var(--muted);font-size:14px}.home-cta .eyebrow{margin-bottom:8px}
+@media(max-width:1100px){.product-row{grid-template-columns:minmax(170px,30%) minmax(0,1fr) 38px;gap:24px}.about-home{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px}.about-strengths{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.about-image-wrap{height:260px}.hero-content{width:72vw}.hero-carousel{height:480px}}
+@media(max-width:640px){.about-home{grid-template-columns:minmax(0,1fr);gap:24px;padding:38px 22px}.about-image-wrap{grid-column:1;grid-row:1;height:clamp(250px,68vw,340px)}.about-strengths{grid-column:1;grid-row:2;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}.about-copy{grid-column:1;grid-row:3;padding-top:0}.about-strengths .strength{gap:8px}.about-strengths .strength-icon{flex-basis:32px;width:32px;height:32px;border-radius:10px}.about-strengths .strength-icon img{width:19px;height:19px}.about-strengths .strength p{font-size:12px}.hero-carousel{height:540px;min-height:540px}.hero-slide-image{object-position:60% center}.hero-shade,.hero-slide-dark .hero-shade{background:linear-gradient(90deg,rgba(29,22,17,.76),rgba(34,25,19,.42))}.hero-content{width:100%;padding:76px 28px 90px}.hero-content h1{max-width:520px;font-size:clamp(30px,8vw,37px);line-height:1.13;letter-spacing:-.6px;overflow-wrap:normal}.hero-description{max-width:460px;font-size:15px;line-height:1.65}.hero-prev{left:12px}.hero-next{right:12px}.hero-arrow{top:auto;bottom:15px;width:38px;height:38px;font-size:27px}.hero-pagination{bottom:29px}.about-home{grid-template-columns:1fr;padding:40px 22px;gap:30px}.about-strengths{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px}.about-image-wrap{height:230px}.products-home{padding:40px 22px}.product-row{grid-template-columns:112px minmax(0,1fr);gap:16px;padding:18px 0;min-height:0}.product-image-link{height:118px}.product-row-copy{padding:0}.product-number{font-size:9px;letter-spacing:1px;margin-bottom:7px}.product-row h3{font-size:18px;margin-bottom:7px}.product-description{font-size:12px;line-height:1.55;margin-bottom:9px}.product-row-arrow{display:none}.home-cta{align-items:flex-start;flex-direction:column;padding:32px 22px}}
+@media(prefers-reduced-motion:reduce){.hero-slide,.about-image-slide,.product-card,.product-card img{transition:none}}
+</style>
