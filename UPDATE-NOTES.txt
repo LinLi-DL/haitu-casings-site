@@ -1,30 +1,27 @@
-HAITU WEBSITE CONTENT UPDATE BATCH
+Haitu Casing website update notes
 
-This is a PATCH for the existing Astro project, not a complete website project.
-Copy the included files into the matching paths in your current project. Do not replace the whole project folder.
+1. Homepage
+- Updated the three hero slides to emphasize producing and providing, specialty polyamide casings, and international supply experience.
+- Improved hero title sizing, text width, background image fitting and mobile typography to reduce awkward title wrapping.
+- Updated the four homepage advantages and About Haitu summary to emphasize production resources, smoke-permeable casings, high-barrier matte and printed options, technical/application-focused support, and trade experience in Russia, Central Asia and North America.
+- Fixed product category descriptions on the English homepage to read the `description` field from src/data/products.ts (instead of the non-existent `text` field).
 
-UPDATED PAGES
-- src/pages/en/index.astro
-- src/pages/en/about-us.astro
-- src/pages/en/plastic-casings.astro
-- src/pages/en/contact-us.astro
+2. Page organization
+- Moved English second-level pages into folders with index.astro files.
+- Moved Russian second-level pages into folders with index.astro files.
+- Kept public URLs unchanged; navigation and internal links still use the existing route paths.
+- Kept individual polyamide casing detail pages under src/pages/en/plastic-casings/.
+- Moved old duplicate homepage drafts out of src/pages into archive/homepage-drafts so Astro will not publish them as active routes.
 
-PRODUCT DETAIL PAGES
-- src/pages/en/plastic-casings/smoke-permeable-easy-peel.astro
-- src/pages/en/plastic-casings/ht-smoke.astro
-- src/pages/en/plastic-casings/ht-barrier-matte.astro
-- src/pages/en/plastic-casings/ht-barrier-soft-matte.astro
-- src/pages/en/plastic-casings/ht-barrier-pearl.astro
-- src/pages/en/plastic-casings/ht-standard.astro
+3. Content
+- Expanded About Haitu with production resources, product focus, application-oriented support, international trade and direct links to casing categories.
+- Reworked collagen, cellulose, fibrous and equipment category pages to be useful without inventing unverified models or technical specifications.
+- Improved the polyamide category introduction and aligned it with smoke-permeable, high-barrier matte and printed casing positioning.
+- Updated the English contact page to use sales07@haitucasing.com and the current WhatsApp contact.
+- Added Russian category descriptions for the Russian About page.
 
-IMAGES
-Seven product photos were extracted from the user-provided HT Plastic Casing V2.0 PDF and copied into public/images/.
-
-CONTENT NOTES
-- Product descriptions and listed specifications follow the supplied HT Plastic Casing V2.0 PDF.
-- Fast-Peel and Frosted were not listed as standalone product models in that PDF, so the catalog instead uses the documented HT Smoke, HT Peel, HT Barrier Matte, HT Barrier Soft Matte, HT Barrier Pearl and HT Standard names.
-- The PDF says HT Peel is available in barrier or smoke-permeable versions. The detail page here focuses on the smoke-permeable easy-peel version.
-- Full polymer composition/layer structure is not specified for most models in the supplied PDF; the pages say to request the current technical information rather than inventing it.
-- Collagen and cellulose pages were not changed because the supplied PDF only documents plastic casings.
-
-After copying, run `npm.cmd run dev` from the project root and test the homepage, Plastic Casings listing, all product links, and Contact Us.
+4. Validation
+- Astro compiler syntax check passed for all 26 .astro files.
+- Internal route-link check found no broken internal links.
+- Local image asset check found no missing referenced images.
+- A full Astro build could not be completed in the editing environment because the uploaded node_modules lacked the platform-specific @rollup/rollup-linux-x64-gnu optional dependency. On the Windows development computer, run `npm.cmd install` and then `npm.cmd run build` to verify the production build.

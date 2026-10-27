@@ -1,0 +1,124 @@
+
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+
+const product = {
+  title: 'HT Easy-Peel Casing for Small-Caliber Sausages',
+  subtitle: '',
+  image: '/images/ht-peel.jpg',
+};
+---
+
+<SiteLayout
+  lang="en"
+  title="HT Easy-Peel Plastic Casing for Small-Caliber Sausages | Haitu Casing"
+  description="Three-layer high-barrier plastic casing for small-caliber sausages, designed for easy peeling."
+>
+  <section class="page-intro product-page-intro">
+    <p class="eyebrow">
+      <a href="/en/plastic-casings/">Plastic Casings</a>
+    </p>
+    <h1>{product.title}</h1>
+    <p class="product-subtitle">{product.subtitle}</p>
+  </section>
+
+  <section class="content-section product-overview">
+    <div class="product-image">
+      <img src={product.image} alt="HT Easy-Peel Plastic Casing for Small-Caliber Sausages" />
+    </div>
+    <div class="product-info">
+      <h2>Product Description</h2>
+      <p>
+        HT Easy-Peel is a three-layer high-barrier polymer casing designed
+        for small-caliber sausage products that require easy peeling after
+        processing. Its barrier structure helps protect product quality
+        during storage, while its easy-peel design supports efficient
+        casing removal.
+      </p>
+      <h2>Application</h2>
+      <p>
+        Small-caliber sausages, including frankfurters and mini-sausages,
+        especially products requiring automatic or semi-automatic peeling.
+      </p>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Three-layer high-barrier structure to help protect product quality during storage.</li>
+        <li>Easy-peel design for convenient casing removal after processing.</li>
+        <li>Suitable for small-caliber sausage products.</li>
+        <li>Good mechanical strength for stuffing and further processing.</li>
+        <li>Mainly supplied in shirred sticks for production-line use.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="content-section specifications">
+    <h2>Specifications</h2>
+    <div class="spec-table-wrap">
+      <table class="spec-table">
+        <tbody>
+          <tr><th>Flat width</th><td>30–57 mm</td></tr>
+          <tr><th>Type</th><td>Three-layer high-barrier, easy-peel</td></tr>
+          <tr><th>Colors</th><td>Clear and colored options</td></tr>
+          <tr><th>Printing</th><td>Available</td></tr>
+          <tr><th>Supply form</th><td>Shirred sticks (mainly) or rolls</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="cta product-cta">
+    <div>
+      <h2>Need specifications or a quotation?</h2>
+      <p>Tell us your sausage type, target caliber, color, printing and supply requirements.</p>
+    </div>
+    <a class="button button-red" href="/en/contact-us/">Contact Haitu Casing →</a>
+  </section>
+</SiteLayout>
+
+<style>
+  .product-intro .eyebrow a { color: var(--red); }
+  .product-intro .product-subtitle { margin-top: 8px; }
+  .product-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 36px;
+    align-items: start;
+    max-width: 1280px;
+  }
+  .product-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  .product-info h2,
+  .specifications h2 {
+    margin: 0 0 12px;
+    color: var(--navy);
+    font-size: clamp(21px, 2vw, 27px);
+  }
+  .product-info h2:not(:first-child) { margin-top: 24px; }
+  .product-info p,
+  .product-info ul,
+  .product-cta p { color: var(--muted); line-height: 1.75; }
+  .product-info ul { padding-left: 20px; margin-bottom: 0; }
+  .product-info li + li { margin-top: 6px; }
+  .specifications { max-width: 900px; padding-top: 12px; }
+  .spec-table-wrap { overflow-x: auto; }
+  .spec-table { width: 100%; border-collapse: collapse; border: 1px solid var(--line); }
+  .spec-table th, .spec-table td {
+    padding: 12px 16px; border-bottom: 1px solid var(--line);
+    text-align: left; vertical-align: top;
+  }
+  .spec-table th {
+    width: 32%; color: var(--navy); background: #f8f8f6; font-weight: 600;
+  }
+  .spec-table td { color: var(--muted); }
+  .spec-table tr:last-child th, .spec-table tr:last-child td { border-bottom: 0; }
+  .product-cta { margin-top: 28px; }
+  @media (max-width: 720px) {
+    .product-overview { grid-template-columns: 1fr; gap: 24px; }
+    .product-image img { max-height: 480px; object-fit: contain; }
+    .spec-table th, .spec-table td { padding: 10px 12px; }
+  }
+</style>

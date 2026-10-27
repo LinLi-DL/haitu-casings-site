@@ -1,0 +1,79 @@
+---
+import { productCategories } from '../data/products';
+const { lang = 'en' } = Astro.props;
+const isRu = lang === 'ru';
+
+// Update these values when the official business contact details are confirmed.
+const phoneDisplay = '+86 18561719122';
+const phoneLink = '+8618561719122';
+const emailAddress = 'sales07@haitucasing.com';
+const wechatQr = '/images/contact/wechat.png';
+const whatsappQr = '/images/contact/whatsapp.png';
+const contactPath = isRu ? '/ru/kontakty/' : '/en/contact-us/';
+---
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-company">
+      <a class="footer-brand" href={isRu ? '/ru/' : '/en/'}>
+        <strong>HAITU <em>CASING</em></strong>
+        <span>{isRu ? 'Продуктовый бренд Haitu Technology' : 'A product brand of Haitu Technology'}</span>
+      </a>
+      <p>{isRu
+        ? 'Поставки оболочек для производителей колбасных изделий и дистрибьюторов.'
+        : 'Sausage casing supply for manufacturers and distributors.'}</p>
+      <a class="footer-quote" href={contactPath}>{isRu ? 'Связаться с нами' : 'Contact our team'} <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="footer-products">
+      <h2>{isRu ? 'Основные продукты' : 'Key Products'}</h2>
+      <ul>
+        {productCategories.map((product) => (
+          <li><a href={isRu ? product.ruHref : product.href}><span class="footer-product-order">{product.order}</span><span class="footer-product-name">{isRu ? product.ruTitle : product.title}</span><span class="footer-product-arrow" aria-hidden="true">›</span></a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h2>{isRu ? 'Контакты' : 'Contact'}</h2>
+      <div class="contact-line">
+        <span class="contact-icon" aria-hidden="true">☎</span>
+        <div><small>{isRu ? 'Телефон' : 'Phone'}</small><a href={`tel:${phoneLink}`}>{phoneDisplay}</a></div>
+      </div>
+      <div class="contact-line">
+        <span class="contact-icon" aria-hidden="true">✉</span>
+        <div><small>Email</small><a href={`mailto:${emailAddress}`}>{emailAddress}</a></div>
+      </div>
+      <div class="footer-socials" aria-label="Social media and messaging links">
+        <a href="https://www.linkedin.com/in/maksim-li-413228308/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><img src="/images/social/linkedin.svg" alt="" width="24" height="24" loading="lazy" />
+        </a>
+        <a href="https://wa.me/8615061719122" aria-label="WhatsApp +86 15061719122" title="WhatsApp" target="_blank" rel="noopener noreferrer"><img src="/images/social/whatsapp.svg" alt="" width="24" height="24" loading="lazy" />
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61581484790334" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener noreferrer"><img src="/images/social/facebook.svg" alt="" width="24" height="24" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/lynn021028/" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener noreferrer"><img src="/images/social/instagram.svg" alt="" width="24" height="24" loading="lazy" />
+        </a>
+      </div>
+      <p class="social-note">{isRu ? 'Нажмите на значок, чтобы открыть профиль в соответствующей социальной сети.' : 'Select a social icon to visit the corresponding profile.'}</p>
+    </div>
+
+    <div class="footer-qr-section">
+      <h2>{isRu ? 'Свяжитесь с нами' : 'Scan to Connect'}</h2>
+      <div class="footer-qr-grid">
+        <div class="qr-card">
+          <img src={wechatQr} alt="WeChat QR code" loading="lazy" />
+          <span>WeChat</span>
+        </div>
+        <div class="qr-card">
+          <img src={whatsappQr} alt="WhatsApp QR code" loading="lazy" />
+          <span>WhatsApp</span>
+        </div>
+      </div>
+      <p class="qr-note">{isRu ? 'Отсканируйте QR-код, чтобы связаться с нами.' : 'Scan a QR code to connect with our team.'}</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <small>© {new Date().getFullYear()} Haitu Technology. {isRu ? 'Все права защищены.' : 'All rights reserved.'}</small>
+    <div><a href={isRu ? '/en/' : '/ru/'}>{isRu ? 'English' : 'Русский'}</a><a href={contactPath}>{isRu ? 'Контакты' : 'Contact'}</a></div>
+  </div>
+</footer>

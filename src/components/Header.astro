@@ -1,0 +1,74 @@
+---
+import { productCategories } from '../data/products';
+const { lang = 'en' } = Astro.props;
+const isRu = lang === 'ru';
+const nav = isRu
+  ? [
+      { label: 'Главная', href: '/ru/' },
+      { label: 'О компании', href: '/ru/o-kompanii/' },
+      { label: 'Контакты', href: '/ru/kontakty/' },
+    ]
+  : [
+      { label: 'Home', href: '/en/' },
+      { label: 'About Us', href: '/en/about-us/' },
+      { label: 'Contact', href: '/en/contact-us/' },
+    ];
+const quote = isRu ? 'Запросить цену' : 'Request a Quote';
+const productsLabel = isRu ? 'Продукция' : 'Products';
+---
+<header class="site-header">
+  <a class="brand" href={isRu ? '/ru/' : '/en/'} aria-label="Haitu Casing home">
+    <img class="brand-logo" src="/images/haitu-logo.png" alt="Haitu Technology logo" />
+    <span class="brand-copy"><strong>HAITU <em>CASING</em></strong><small>by Haitu Technology</small></span>
+  </a>
+
+  <nav class="main-nav" aria-label={isRu ? 'Основная навигация' : 'Main navigation'}>
+    <a class="top-nav-link" href={nav[0].href}>{nav[0].label}</a>
+    <a class="top-nav-link" href={nav[1].href}>{nav[1].label}</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+        {productsLabel}<span class="dropdown-chevron" aria-hidden="true">⌄</span>
+      </button>
+      <div class="nav-dropdown-menu">
+        {productCategories.map((product) => (
+          <a href={isRu ? product.ruHref : product.href}>
+            <span>{isRu ? product.ruTitle : product.title}</span>
+            <span class="dropdown-arrow" aria-hidden="true">›</span>
+          </a>
+        ))}
+      </div>
+    </div>
+    <a class="top-nav-link" href={nav[2].href}>{nav[2].label}</a>
+  </nav>
+
+  <div class="header-actions">
+    <a class="language" href={isRu ? '/en/' : '/ru/'} aria-label={isRu ? 'Switch to English' : 'Переключить на русский'}>{isRu ? 'EN' : 'RU'}</a>
+    <a class="button button-red button-small" href={isRu ? '/ru/kontakty/' : '/en/contact-us/'}>{quote}</a>
+  </div>
+</header>
+
+<script>
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach((dropdown) => {
+    const button = dropdown.querySelector('.nav-dropdown-toggle');
+    if (!button) return;
+    button.addEventListener('click', () => {
+      const willOpen = button.getAttribute('aria-expanded') !== 'true';
+      dropdowns.forEach((other) => {
+        const otherButton = other.querySelector('.nav-dropdown-toggle');
+        if (otherButton) otherButton.setAttribute('aria-expanded', 'false');
+      });
+      button.setAttribute('aria-expanded', String(willOpen));
+    });
+    dropdown.addEventListener('mouseenter', () => button.setAttribute('aria-expanded', 'true'));
+    dropdown.addEventListener('mouseleave', () => button.setAttribute('aria-expanded', 'false'));
+    dropdown.addEventListener('focusout', (event) => {
+      if (!dropdown.contains(event.relatedTarget)) button.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.addEventListener('click', (event) => {
+    dropdowns.forEach((dropdown) => {
+      if (!dropdown.contains(event.target)) dropdown.querySelector('.nav-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+    });
+  });
+</script>

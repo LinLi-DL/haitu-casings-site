@@ -1,0 +1,17 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+<SiteLayout lang="en" title="Food Processing Equipment | Haitu Casing" description="Equipment sourcing coordination for sausage and meat-processing businesses, based on production requirements.">
+  <section class="page-intro"><p class="eyebrow">EQUIPMENT & PROCESSING SUPPORT</p><h1>Food Processing Equipment</h1><p>In addition to casing supply, Haitu can discuss food-processing equipment requirements for sausage and meat-processing businesses and coordinate suitable options through our supply network.</p></section>
+  <section class="content-section equipment-layout">
+    <div class="equipment-image"><img src="/images/about-equipment.jpg" alt="Sausage processing and stuffing equipment" loading="lazy" /></div>
+    <div><h2>Start with Your Production Requirements</h2><p>Equipment selection depends on the product, production capacity, processing steps, automation level and available factory space. Share the information you have, and we can discuss the next steps and confirm which options may be available.</p><p>We do not list unverified equipment specifications here; model details, configuration, availability and commercial terms are confirmed individually.</p><a class="button button-red" href="/en/contact-us/">Discuss Equipment Requirements <span aria-hidden="true">→</span></a></div>
+  </section>
+</SiteLayout>
+<style>
+.equipment-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:center}
+.equipment-image img{display:block;width:100%;max-height:460px;object-fit:cover;border-radius:8px 40px 8px 8px}
+.equipment-layout h2{margin:0 0 14px;color:var(--navy);font-size:clamp(25px,3vw,36px);line-height:1.2}
+.equipment-layout p{color:var(--muted);line-height:1.8}
+@media(max-width:700px){.equipment-layout{grid-template-columns:1fr;gap:24px}}
+</style>
