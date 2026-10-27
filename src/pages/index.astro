@@ -1,3 +1,20 @@
----
-return Astro.redirect('/en/', 302);
----
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0;url=/en/" />
+    <title>Haitu Casing</title>
+    <link rel="canonical" href="https://haitucasing.com/en/" />
+    <script>
+      window.location.replace('/en/');
+    </script>
+  </head>
+  <body>
+    <p>
+      Redirecting to
+      <a href="/en/">Haitu Casing English website</a>...
+    </p>
+  </body>
+</html>
