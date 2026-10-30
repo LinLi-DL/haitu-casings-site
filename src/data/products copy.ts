@@ -44,11 +44,11 @@ export const productCategories = [
     key: 'fibrous',
     order: '04',
     title: 'Fibrous Casings',
-    ruTitle: 'Фиброзные оболочки',
+    ruTitle: 'Фиброузные оболочки',
     description:
       'Fibrous casing supply for selected larger-caliber sausages and processed-meat applications.',
     ruDescription:
-      'Поставки фиброзных оболочек для отдельных видов колбас крупного калибра и мясных продуктов.',
+      'Поставки Фиброузные оболочек для отдельных видов колбас крупного калибра и мясных продуктов.',
     image: '/images/hero-fibrous-casings.jpg',
     href: '/en/fibrous-casings/',
     ruHref: '/ru/fibrous-obolochki/',
