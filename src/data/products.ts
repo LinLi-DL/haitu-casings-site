@@ -8,10 +8,10 @@ export const productCategories = [
     description:
       'Smoke-permeable, high-barrier matte and printed plastic casings for different sausage products and processing requirements.',
     ruDescription:
-      'Пластиковые оболочки с проницаемостью для дыма, высокобарьерные матовые и печатные оболочки для различных колбасных изделий.',
+      'Дымопроницаемые, высокобарьерные матовые и печатные пластиковые оболочки для различных видов колбасных изделий и технологических процессов.',
     image: '/images/ht-plastic-casing.jpg',
     href: '/en/plastic-casings/',
-    ruHref: '/ru/plastikovye-obolochki/',
+    ruHref: '/ru/plastic-casings/',
     featured: true,
   },
   {
@@ -22,10 +22,10 @@ export const productCategories = [
     description:
       'Collagen casings with coordinated production and specification support for sausage manufacturers.',
     ruDescription:
-      'Коллагеновые оболочки с согласованием производства и характеристик для производителей колбасных изделий.',
+      'Коллагеновые оболочки с согласованием производственных возможностей и технических характеристик для производителей колбасных изделий.',
     image: '/images/ht-collagen-casings.jpg',
     href: '/en/collagen-casings/',
-    ruHref: '/ru/kollagenovye-obolochki/',
+    ruHref: '/ru/collagen-casings/',
   },
   {
     key: 'cellulose',
@@ -35,10 +35,10 @@ export const productCategories = [
     description:
       'Cellulose casing supply coordinated around product requirements, available formats and order specifications.',
     ruDescription:
-      'Поставки целлюлозных оболочек с учётом требований к продукту, формату и спецификации заказа.',
+      'Поставки целлюлозных оболочек с учётом требований к продукции, доступных форматов и спецификаций заказа.',
     image: '/images/hero-cellulose-casings.jpg',
     href: '/en/cellulose-casings/',
-    ruHref: '/ru/tsellyuloznye-obolochki/',
+    ruHref: '/ru/cellulose-casings/',
   },
   {
     key: 'fibrous',
@@ -51,7 +51,7 @@ export const productCategories = [
       'Поставки фиброзных оболочек для отдельных видов колбас крупного калибра и мясных продуктов.',
     image: '/images/hero-fibrous-casings.jpg',
     href: '/en/fibrous-casings/',
-    ruHref: '/ru/fibrous-obolochki/',
+    ruHref: '/ru/fibrous-casings/',
   },
   {
     key: 'equipment',
@@ -61,9 +61,9 @@ export const productCategories = [
     description:
       'Equipment sourcing and supply coordination for sausage and meat-processing businesses.',
     ruDescription:
-      'Подбор и координация поставок оборудования для колбасного и мясоперерабатывающего производства.',
+      'Подбор оборудования и координация его поставок для производителей колбасных изделий и мясоперерабатывающих предприятий.',
     image: '/images/about-equipment.jpg',
     href: '/en/food-processing-equipment/',
-    ruHref: '/ru/oborudovanie/',
+    ruHref: '/ru/food-processing-equipment/',
   },
 ];

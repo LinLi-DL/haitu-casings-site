@@ -1,3 +1,4 @@
+
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import { productCategories } from '../../data/products';
@@ -5,41 +6,55 @@ import { productCategories } from '../../data/products';
 const slides = [
   {
     image: '/images/about-factory.jpg',
-    alt: 'Sausage casing production and processing facilities',
-    eyebrow: 'MANUFACTURING & SUPPLY',
-    title: 'Producing with Purpose. Supplying with Precision.',
-    text: 'Specialized production resources for polyamide and collagen casings, combined with coordinated supply solutions for sausage and meat processing manufacturers.',
-    href: '/en/about-us/',
-    link: 'Discover Haitu',
+    alt: 'Производственные мощности и оборудование для изготовления колбасных оболочек',
+    eyebrow: 'ПРОИЗВОДСТВО И ПОСТАВКИ',
+    title: 'Ответственное производство. Точные поставки.',
+    text: 'Специализированные производственные ресурсы для полиамидных и коллагеновых оболочек, а также комплексные решения по поставкам для производителей колбасных изделий и мясоперерабатывающих предприятий.',
+    href: '/ru/about-us/',
+    link: 'О компании Haitu',
     tone: 'light',
   },
   {
     image: '/images/ht-plastic-casing.jpg',
-    alt: 'Smoked sausages made with smoke-permeable plastic casings',
-    eyebrow: 'SPECIALTY POLYAMIDE CASINGS',
-    title: 'Specialty Polyamide Casings for Demanding Applications',
-    text: 'From smoke-permeable casings to high-barrier matte finishes and custom printing, we help manufacturers match casing performance and appearance to their products and processing requirements.',
-    href: '/en/plastic-casings/',
-    link: 'Explore Polyamide Casings',
+    alt: 'Копчёные колбасные изделия в дымопроницаемых пластиковых оболочках',
+    eyebrow: 'СПЕЦИАЛИЗИРОВАННЫЕ ПОЛИАМИДНЫЕ ОБОЛОЧКИ',
+    title: 'Специализированные полиамидные оболочки для различных задач',
+    text: 'От дымопроницаемых оболочек до матовых покрытий с высокими барьерными свойствами и индивидуальной печати — мы помогаем подобрать характеристики и внешний вид оболочки с учётом продукции и технологических требований.',
+    href: '/ru/plastic-casings/',
+    link: 'Полиамидные оболочки',
     tone: 'dark',
   },
   {
     image: '/images/about-logistics.jpg',
-    alt: 'Casing products prepared for international shipment',
-    eyebrow: 'ONE-STOP CASING SUPPLY',
-    title: 'Complete Casing Solutions. Connected to Global Markets.',
-    text: 'With international trade experience across Russia, Central Asia and North America, we coordinate casing supply, export documentation and shipping to support customers across markets.',
-    href: '/en/contact-us/',
-    link: 'Discuss Your Requirements',
+    alt: 'Оболочки, подготовленные к международной отправке',
+    eyebrow: 'КОМПЛЕКСНЫЕ ПОСТАВКИ ОБОЛОЧЕК',
+    title: 'Комплексные решения по поставкам для международных рынков',
+    text: 'Опираясь на опыт международной торговли с Россией, странами Центральной Азии и Северной Америки, мы координируем поставки оболочек, экспортное оформление и логистику для клиентов на разных рынках.',
+    href: '/ru/contact-us/',
+    link: 'Обсудить ваши требования',
     tone: 'light',
   },
 ];
 
-const products = productCategories;
+
+
+const products = productCategories.map((p) => ({
+  ...p,
+  title: p.ruTitle,
+  description: p.ruDescription,
+  href: p.ruHref,
+}));
+
+
+
 ---
 
-<SiteLayout lang="en" title="Haitu Casing | Sausage Casings for Food Processors" description="Haitu Technology supplies polyamide, collagen, cellulose and fibrous casings, with specialized production partners and export coordination from Qingdao, China.">
-  <section class="hero-carousel" data-hero-carousel aria-label="Haitu manufacturing, specialty casings and global supply">
+<SiteLayout
+  lang="ru"
+  title="Haitu Casing | Колбасные оболочки для мясоперерабатывающих предприятий"
+  description="Haitu Technology поставляет полиамидные, коллагеновые, целлюлозные и фиброзные оболочки. Мы сотрудничаем со специализированными производственными предприятиями и организуем экспортные поставки из Циндао, Китай."
+>
+  <section class="hero-carousel" data-hero-carousel aria-label="Производство Haitu, специализированные оболочки и международные поставки">
     {slides.map((slide, index) => (
       <article class:list={['hero-slide', slide.tone === 'dark' && 'hero-slide-dark', index === 0 && 'is-active']} data-hero-slide aria-hidden={index === 0 ? 'false' : 'true'}>
         <img class="hero-slide-image" src={slide.image} alt={slide.alt} fetchpriority={index === 0 ? 'high' : 'auto'} />
@@ -52,55 +67,55 @@ const products = productCategories;
         </div>
       </article>
     ))}
-    <button class="hero-arrow hero-prev" type="button" data-hero-prev aria-label="Previous product">‹</button>
-    <button class="hero-arrow hero-next" type="button" data-hero-next aria-label="Next product">›</button>
-    <div class="hero-pagination" aria-label="Choose featured product">
-      {slides.map((slide, index) => <button type="button" class="hero-dot" data-hero-dot aria-label={`Show ${slide.title}`} aria-current={index === 0 ? 'true' : 'false'}></button>)}
+    <button class="hero-arrow hero-prev" type="button" data-hero-prev aria-label="Предыдущий слайд">‹</button>
+    <button class="hero-arrow hero-next" type="button" data-hero-next aria-label="Следующий слайд">›</button>
+    <div class="hero-pagination" aria-label="Выбрать раздел">
+      {slides.map((slide, index) => <button type="button" class="hero-dot" data-hero-dot aria-label={`Показать: ${slide.title}`} aria-current={index === 0 ? 'true' : 'false'}></button>)}
     </div>
   </section>
 
   <section class="about-home" aria-labelledby="about-title">
-    <div class="about-image-wrap" data-about-carousel aria-label="Haitu operations and services">
+    <div class="about-image-wrap" data-about-carousel aria-label="Деятельность и услуги Haitu">
       <div class="about-image-slide is-active" data-about-slide aria-hidden="false">
-        <img src="/images/about-factory-outside.jpg" alt="Haitu partner factory and casing production resources" loading="lazy" />
-        <span class="about-image-caption">Manufacturing Resources</span>
+        <img src="/images/about-factory-outside.jpg" alt="Партнёрское предприятие Haitu и производственные ресурсы" loading="lazy" />
+        <span class="about-image-caption">Производственные ресурсы</span>
       </div>
       <div class="about-image-slide" data-about-slide aria-hidden="true">
-        <img src="/images/about-equipment.jpg" alt="Equipment used in sausage casing production and processing" loading="lazy" />
-        <span class="about-image-caption">Production Technology</span>
+        <img src="/images/about-equipment.jpg" alt="Оборудование для производства и обработки колбасных оболочек" loading="lazy" />
+        <span class="about-image-caption">Производственные технологии</span>
       </div>
-      <div class="about-image-controls" aria-label="About images">
-        <button type="button" data-about-prev aria-label="Previous About image">‹</button>
+      <div class="about-image-controls" aria-label="Изображения о компании">
+        <button type="button" data-about-prev aria-label="Предыдущее изображение">‹</button>
         <div class="about-image-dots">
-          <button type="button" data-about-dot aria-label="Show manufacturing image" aria-current="true"></button>
-          <button type="button" data-about-dot aria-label="Show production technology image" aria-current="false"></button>
+          <button type="button" data-about-dot aria-label="Показать изображение производства" aria-current="true"></button>
+          <button type="button" data-about-dot aria-label="Показать изображение производственных технологий" aria-current="false"></button>
         </div>
-        <button type="button" data-about-next aria-label="Next About image">›</button>
+        <button type="button" data-about-next aria-label="Следующее изображение">›</button>
       </div>
     </div>
 
     <div class="about-strengths">
-      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/production-partners.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Manufacturing Strength</h3><p>Dedicated production resources, modern equipment and coordinated manufacturing for polyamide and collagen casings.</p></div></article>
-      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/premium-quality.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Technology & Innovation</h3><p>Specialty casing development, advanced printing capabilities and continued improvement of casing performance.</p></div></article>
-      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/casing-portfolio.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Professional Team & Technical Support</h3><p>Our sales and technical support team assists with product selection, specifications, processing questions and follow-up.</p></div></article>
-      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/export-service.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Global Trade & Supply Solutions</h3><p>International order coordination and export service for customers in Russia, Central Asia and North America.</p></div></article>
+      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/production-partners.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Производственные возможности</h3><p>Профессиональные производственные линии, современное оборудование и достаточные мощности для выпуска пластиковых и коллагеновых оболочек.</p></div></article>
+      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/premium-quality.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Технологии и инновации</h3><p>Разработка специализированных оболочек, современные возможности печати и постоянное совершенствование характеристик продукции.</p></div></article>
+      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/casing-portfolio.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Профессиональная команда и техническая поддержка</h3><p>Наша команда помогает подобрать продукцию, уточнить характеристики, решить технологические вопросы и организовать дальнейшее сопровождение заказов.</p></div></article>
+      <article class="strength"><span class="strength-icon" aria-hidden="true"><img src="/images/icons/export-service.svg" alt="" width="24" height="24" loading="lazy" /></span><div><h3>Международная торговля и комплексные поставки</h3><p>Координация международных заказов и экспортное сопровождение клиентов в России, Центральной Азии и Северной Америке.</p></div></article>
     </div>
 
     <div class="about-copy">
-      <p class="eyebrow">ABOUT HAITU</p>
-      <h2 id="about-title">Producing & Providing. Your Partner in Casing Solutions.</h2>
-      <p>Haitu Technology combines dedicated production resources with coordinated supply services for sausage and meat processing manufacturers. Working closely with our production partners, we focus on dependable manufacturing, practical technical support and long-term customer relationships.</p>
-      <p>Our four core strengths are manufacturing, technology and innovation, professional technical support, and global trade. Polyamide casings are a key focus, alongside collagen casings and coordinated supply of cellulose and fibrous casings. Selected specialty products remain under development and are introduced only when ready for customer application.</p>
-      <a class="button button-red" href="/en/about-us/">Learn More About Us <span aria-hidden="true">→</span></a>
+      <p class="eyebrow">О КОМПАНИИ HAITU</p>
+      <h2 id="about-title">Производство и поставки. Ваш партнёр в сфере колбасных оболочек.</h2>
+      <p>Haitu Technology — компания, работающая в сфере колбасных оболочек и объединяющая разработку продукции, производственные ресурсы и продажи. Мы предлагаем качественные оболочки производителям колбасных изделий по всему миру, уделяя особое внимание надёжности поставок, практической технической поддержке и долгосрочному сотрудничеству.</p>
+      <p>Наши четыре ключевых направления — производственные возможности, технологии и инновации, профессиональная техническая поддержка и международная торговля. Основное внимание мы уделяем полиамидным оболочкам, а также предлагаем коллагеновые оболочки и организуем поставки целлюлозных и фиброзных оболочек. Специализированные продукты, находящиеся в разработке, предлагаются клиентам только после готовности к практическому применению.</p>
+      <a class="button button-red" href="/ru/about-us/">Подробнее о компании <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <section class="products-home" id="products">
-    <div class="section-heading"><div><p class="eyebrow">OUR PRODUCTS</p><h2>Our Product Categories</h2><p class="section-intro">Specialty polyamide casings, collagen casings and coordinated supply for sausage and meat processors.</p></div></div>
-    <div class="product-list">{products.map((p, i) => <article class="product-row"><a class="product-image-link" href={p.href} aria-label={`Explore ${p.title}`}><img src={p.image} alt={p.title} loading="lazy" /></a><div class="product-row-copy"><p class="product-number">{String(i + 1).padStart(2, '0')} <span aria-hidden="true">/</span> PRODUCT CATEGORY</p><h3><a href={p.href}>{p.title}</a></h3><p class="product-description">{p.description}</p><a class="text-link" href={p.href}>Explore Category <span aria-hidden="true">→</span></a></div><a class="product-row-arrow" href={p.href} aria-label={`Explore ${p.title}`}><span aria-hidden="true">↗</span></a></article>)}</div>
+    <div class="section-heading"><div><p class="eyebrow">НАША ПРОДУКЦИЯ</p><h2>Категории продукции</h2><p class="section-intro">Специализированные полиамидные и коллагеновые оболочки, а также комплексные поставки для производителей колбасных изделий и мясоперерабатывающих предприятий.</p></div></div>
+    <div class="product-list">{products.map((p, i) => <article class="product-row"><a class="product-image-link" href={p.href.replace('/en/', '/ru/')} aria-label={`Подробнее: ${p.title}`}><img src={p.image} alt={p.title} loading="lazy" /></a><div class="product-row-copy"><p class="product-number">{String(i + 1).padStart(2, '0')} <span aria-hidden="true">/</span> КАТЕГОРИЯ ПРОДУКЦИИ</p><h3><a href={p.href.replace('/en/', '/ru/')}>{p.title}</a></h3><p class="product-description">{p.description}</p><a class="text-link" href={p.href.replace('/en/', '/ru/')}>Подробнее о категории <span aria-hidden="true">→</span></a></div><a class="product-row-arrow" href={p.href.replace('/en/', '/ru/')} aria-label={`Перейти к категории: ${p.title}`}><span aria-hidden="true">↗</span></a></article>)}</div>
   </section>
 
-  <section class="home-cta"><div><p class="eyebrow">LET'S TALK ABOUT YOUR REQUIREMENTS</p><h2>Looking for the right casing solution?</h2><p>Tell us about your product, target caliber, printing and supply requirements.</p></div><a class="button button-red" href="/en/contact-us/">Contact Haitu <span aria-hidden="true">→</span></a></section>
+  <section class="home-cta"><div><p class="eyebrow">ОБСУДИМ ВАШИ ТРЕБОВАНИЯ</p><h2>Ищете подходящее решение по колбасным оболочкам?</h2><p>Расскажите нам о вашей продукции, необходимом калибре, требованиях к печати и поставкам.</p></div><a class="button button-red" href="/ru/contact-us/">Связаться с Haitu <span aria-hidden="true">→</span></a></section>
 </SiteLayout>
 
 <script>

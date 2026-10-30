@@ -1,0 +1,200 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+
+const product = {
+  title: 'Collagen Casings for Fried Sausages',
+  subtitle: '',
+  image: '/images/collagen-casings-fried.jpg',
+};
+---
+
+<SiteLayout
+  lang="en"
+  title="Collagen Casings for Fried Sausages | Haitu Casing"
+  description="Developed for sausages that require high-temperature deep frying or extended heating."
+>
+  <section class="page-intro product-page-intro">
+    <p class="eyebrow">
+      <a href="/en/collagen-casings/">Collagen Casings</a>
+    </p>
+    <h1>{product.title}</h1>
+  </section>
+
+  <section class="content-section product-overview">
+    <div class="product-image">
+      <img src={product.image} alt="Collagen Casings for Fried Sausages" />
+    </div>
+
+    <div class="product-info">
+      <h2>Product Description</h2>
+      <p>
+        Collagen Casings for Fried Sausages are developed for sausages that require high-temperature deep frying or extended heating.
+      </p>
+
+      <h2>Application</h2>
+      <p>
+        Hot dogs, frankfurters, deep-fried sausages, and various fast-food sausages.
+      </p>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Withstands prolonged high-temperature deep frying.</li>
+        <li>Also suitable for extended grilling processes.</li>
+        <li>Resists breaking during steaming, water cooking, and secondary sterilization.</li>
+        <li>Recommended processes: deep frying, grilling, water cooking, steaming, air frying.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="content-section specifications">
+    <h2>Specifications</h2>
+
+    <div class="spec-table-wrap">
+      <table class="spec-table">
+        <tbody>
+          <tr>
+            <th>Type</th>
+            <td>Frying collagen casing</td>
+          </tr>
+          <tr>
+            <th>Caliber</th>
+            <td>13 - 34 mm</td>
+          </tr>
+          <tr>
+            <th>Colors</th>
+            <td>Clear</td>
+          </tr>
+          <tr>
+            <th>Supply form</th>
+            <td>Shirred</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="cta product-cta">
+    <div>
+      <h2>Need specifications or a quotation?</h2>
+      <p>
+        Tell us your sausage type, target caliber, frying process
+        and supply requirements.
+      </p>
+    </div>
+    <a class="button button-red" href="/en/contact-us/">
+      Contact Haitu Casing →
+    </a>
+  </section>
+</SiteLayout>
+
+<style>
+  .product-intro .eyebrow a {
+    color: var(--red);
+  }
+
+  .product-intro .product-subtitle {
+    margin-top: 8px;
+  }
+
+  .product-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 36px;
+    align-items: start;
+    max-width: 1280px;
+  }
+
+  .product-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .product-info h2,
+  .specifications h2 {
+    margin: 0 0 12px;
+    color: var(--navy);
+    font-size: clamp(21px, 2vw, 27px);
+  }
+
+  .product-info h2:not(:first-child) {
+    margin-top: 24px;
+  }
+
+  .product-info p,
+  .product-info ul,
+  .product-cta p {
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .product-info ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .product-info li + li {
+    margin-top: 6px;
+  }
+
+  .specifications {
+    max-width: 900px;
+    padding-top: 12px;
+  }
+
+  .spec-table-wrap {
+    overflow-x: auto;
+  }
+
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--line);
+  }
+
+  .spec-table th,
+  .spec-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .spec-table th {
+    width: 32%;
+    color: var(--navy);
+    background: #f8f8f6;
+    font-weight: 600;
+  }
+
+  .spec-table td {
+    color: var(--muted);
+  }
+
+  .spec-table tr:last-child th,
+  .spec-table tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .product-cta {
+    margin-top: 28px;
+  }
+
+  @media (max-width: 720px) {
+    .product-overview {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .product-image img {
+      max-height: 480px;
+      object-fit: contain;
+    }
+
+    .spec-table th,
+    .spec-table td {
+      padding: 10px 12px;
+    }
+  }
+</style>
