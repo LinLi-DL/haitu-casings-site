@@ -2,89 +2,92 @@
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 
 const product = {
-  title: 'Collagen Casings for Fried Sausages',
+  title: 'Коллагеновые оболочки для жареных колбасок',
   subtitle: '',
   image: '/images/collagen-casings-fried.jpg',
 };
 ---
 
 <SiteLayout
-  lang="en"
-  title="Collagen Casings for Fried Sausages | Haitu Casing"
-  description="Developed for sausages that require high-temperature deep frying or extended heating."
+  lang="ru"
+  title="Коллагеновые оболочки для жареных колбасок | Haitu Casing"
+  description="Коллагеновые оболочки для колбасных изделий, предназначенных для жарки при высоких температурах и длительной термической обработки."
 >
   <section class="page-intro product-page-intro">
-    <p class="eyebrow">
-      <a href="/en/collagen-casings/">Collagen Casings</a>
+  <p class="eyebrow">
+    <a href="/ru/collagen-casings/">Коллагеновые оболочки</a>
+  </p>
+  <h1>{product.title}</h1>
+</section>
+
+<section class="content-section product-overview">
+  <div class="product-image">
+    <img src={product.image} alt="Коллагеновые оболочки для жареных колбасок" />
+  </div>
+
+  <div class="product-info">
+    <h2>Описание продукта</h2>
+    <p>
+      Коллагеновые оболочки для жареных колбасок разработаны
+      для производства колбасных изделий, требующих жарки
+      при высоких температурах или длительной термической обработки.
     </p>
-    <h1>{product.title}</h1>
-  </section>
 
-  <section class="content-section product-overview">
-    <div class="product-image">
-      <img src={product.image} alt="Collagen Casings for Fried Sausages" />
-    </div>
+    <h2>Область применения</h2>
+    <p>
+      Хот-доги, сосиски, колбаски для жарки во фритюре
+      и различные виды колбасных изделий для быстрого питания.
+    </p>
 
-    <div class="product-info">
-      <h2>Product Description</h2>
-      <p>
-        Collagen Casings for Fried Sausages are developed for sausages that require high-temperature deep frying or extended heating.
-      </p>
+    <h2>Основные характеристики</h2>
+    <ul>
+      <li>Устойчивость к длительной жарке во фритюре при высоких температурах.</li>
+      <li>Подходят также для длительного приготовления на гриле.</li>
+      <li>Устойчивы к разрывам при обработке паром, варке в воде и повторной стерилизации.</li>
+      <li>Рекомендуемые способы обработки: жарка во фритюре, приготовление на гриле, варка в воде, обработка паром и приготовление в аэрогриле.</li>
+    </ul>
+  </div>
+</section>
 
-      <h2>Application</h2>
-      <p>
-        Hot dogs, frankfurters, deep-fried sausages, and various fast-food sausages.
-      </p>
+<section class="content-section specifications">
+  <h2>Технические характеристики</h2>
 
-      <h2>Key Features</h2>
-      <ul>
-        <li>Withstands prolonged high-temperature deep frying.</li>
-        <li>Also suitable for extended grilling processes.</li>
-        <li>Resists breaking during steaming, water cooking, and secondary sterilization.</li>
-        <li>Recommended processes: deep frying, grilling, water cooking, steaming, air frying.</li>
-      </ul>
-    </div>
-  </section>
+  <div class="spec-table-wrap">
+    <table class="spec-table">
+      <tbody>
+        <tr>
+          <th>Тип</th>
+          <td>Коллагеновая оболочка для жареных колбасок</td>
+        </tr>
+        <tr>
+          <th>Калибр</th>
+          <td>13 – 34 мм</td>
+        </tr>
+        <tr>
+          <th>Цвет</th>
+          <td>Прозрачная</td>
+        </tr>
+        <tr>
+          <th>Форма поставки</th>
+          <td>В гофрированных палочках</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <section class="content-section specifications">
-    <h2>Specifications</h2>
-
-    <div class="spec-table-wrap">
-      <table class="spec-table">
-        <tbody>
-          <tr>
-            <th>Type</th>
-            <td>Frying collagen casing</td>
-          </tr>
-          <tr>
-            <th>Caliber</th>
-            <td>13 - 34 mm</td>
-          </tr>
-          <tr>
-            <th>Colors</th>
-            <td>Clear</td>
-          </tr>
-          <tr>
-            <th>Supply form</th>
-            <td>Shirred</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="cta product-cta">
-    <div>
-      <h2>Need specifications or a quotation?</h2>
-      <p>
-        Tell us your sausage type, target caliber, frying process
-        and supply requirements.
-      </p>
-    </div>
-    <a class="button button-red" href="/en/contact-us/">
-      Contact Haitu Casing →
-    </a>
-  </section>
+<section class="cta product-cta">
+  <div>
+    <h2>Нужны технические характеристики или расчёт стоимости?</h2>
+    <p>
+      Сообщите нам тип колбасных изделий, требуемый калибр,
+      способ жарки и требования к поставке.
+    </p>
+  </div>
+  <a class="button button-red" href="/ru/contact-us/">
+    Связаться с Haitu Casing →
+  </a>
+</section>
 </SiteLayout>
 
 <style>

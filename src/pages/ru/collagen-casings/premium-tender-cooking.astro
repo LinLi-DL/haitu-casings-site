@@ -2,86 +2,92 @@
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 
 const product = {
-  title: 'Premium-Tender Cooking Collagen Casings',
-  subtitle: 'Cooking Collagen Casings Designed for a Tender Bite',
+  title: 'Коллагеновые оболочки для варёных колбас с нежной текстурой при укусе',
+  subtitle: 'Для варёных колбас с нежной оболочкой',
   image: '/images/collagen-casings-exported-cooking.jpg',
 };
 ---
 
 <SiteLayout
-  lang="en"
-  title="Premium-Tender Cooking Collagen Casings | Haitu Casing"
-  description="Premium-tender cooking collagen casings for sausage manufacturers seeking a softer, more tender bite in cooked sausage products."
+  lang="ru"
+  title="Коллагеновые оболочки для варёных колбас с нежной текстурой при укусе | Haitu Casing"
+  description="Коллагеновые оболочки для варёных колбас с мягкой и нежной текстурой при укусе, предназначенные для производителей колбасных изделий."
 >
   <section class="page-intro product-page-intro">
-    <p class="eyebrow">
-      <a href="/en/collagen-casings/">Collagen Casings</a>
+  <p class="eyebrow">
+    <a href="/ru/collagen-casings/">Коллагеновые оболочки</a>
+  </p>
+  <h1>{product.title}</h1>
+</section>
+
+<section class="content-section product-overview">
+  <div class="product-image">
+    <img src={product.image} alt="Коллагеновые оболочки для варёных колбас с нежной текстурой при укусе" />
+  </div>
+
+  <div class="product-info">
+    <h2>Описание продукта</h2>
+    <p>
+      Коллагеновые оболочки для варёных колбас с нежной текстурой
+      при укусе разработаны для производства колбасных изделий
+      в западном стиле и готовых к употреблению колбас, где важны
+      хорошее сцепление оболочки с фаршем и нежные ощущения при укусе.
     </p>
-    <h1>{product.title}</h1>
-  </section>
 
-  <section class="content-section product-overview">
-    <div class="product-image">
-      <img src={product.image} alt="Premium-Tender Cooking Collagen Casings" />
-    </div>
+    <h2>Область применения</h2>
+    <p>
+      Сосиски, колбаса «Докторская», молочная колбаса,
+      куриная и говяжья колбасы, колбаски для завтрака,
+      колбаски для барбекю и аналогичная продукция.
+    </p>
 
-    <div class="product-info">
-      <h2>Product Description</h2>
-      <p>
-        Premium-Tender Cooking Collagen Casings are developed for premium Western-style and ready-to-eat sausages that require strong meat adhesion and a tender bite.
-      </p>
+    <h2>Основные характеристики</h2>
+    <ul>
+      <li>Относительно тонкая стенка оболочки обеспечивает нежную текстуру при укусе.</li>
+      <li>Хорошая эластичность и аккуратная форма концов колбасных изделий.</li>
+      <li>Подходят для длительной жарки на сковороде и обработки паром.</li>
+      <li>Хорошее сцепление с мясной эмульсией — минимальный риск отслаивания оболочки и усадки после термической обработки.</li>
+      <li>Рекомендуемые способы обработки: жарка на сковороде, варка в воде, обработка паром и производство колбасных снеков.</li>
+    </ul>
+  </div>
+</section>
 
-      <h2>Application</h2>
-      <p>
-        Frankfurters, doctor’s sausage, milk sausage, chicken sausage, beef sausage, breakfast sausage, BBQ sausage, and similar products.
-      </p>
+<section class="content-section specifications">
+  <h2>Технические характеристики</h2>
 
-      <h2>Key Features</h2>
-      <ul>
-        <li>Relatively thin wall that provides a tender eating experience.</li>
-        <li>Good elasticity with neat, well-formed ends.</li>
-        <li>Suitable for extended pan-frying and steaming.</li>
-        <li>Strong adhesion to the meat emulsion — minimal peeling or shrinkage after cooking.</li>
-        <li>Recommended processes: pan frying, water cooking, steaming, and snack production.</li>
-      </ul>
-    </div>
-  </section>
+  <div class="spec-table-wrap">
+    <table class="spec-table">
+      <tbody>
+        <tr>
+          <th>Тип</th>
+          <td>Коллагеновая оболочка для варёных колбас с нежной текстурой при укусе</td>
+        </tr>
+        <tr>
+          <th>Калибр</th>
+          <td>18 – 34 мм</td>
+        </tr>
+        <tr>
+          <th>Форма поставки</th>
+          <td>В гофрированных палочках</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <section class="content-section specifications">
-    <h2>Specifications</h2>
-
-    <div class="spec-table-wrap">
-      <table class="spec-table">
-        <tbody>
-          <tr>
-            <th>Type</th>
-            <td>Premium-Tender cooking collagen casing</td>
-          </tr>
-          <tr>
-            <th>Caliber</th>
-            <td>18 - 34 mm</td>
-          </tr>
-          <tr>
-            <th>Supply form</th>
-            <td>Shirred</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="cta product-cta">
-    <div>
-      <h2>Looking for a tender bite in your sausages?</h2>
-      <p>
-        Share your sausage recipe, target caliber and cooking conditions
-        so we can discuss a suitable casing option.
-      </p>
-    </div>
-    <a class="button button-red" href="/en/contact-us/">
-      Contact Haitu Casing →
-    </a>
-  </section>
+<section class="cta product-cta">
+  <div>
+    <h2>Хотите добиться более нежной текстуры при укусе?</h2>
+    <p>
+      Расскажите нам о рецептуре колбасных изделий,
+      требуемом калибре и условиях термической обработки,
+      чтобы мы могли обсудить подходящий вариант оболочки.
+    </p>
+  </div>
+  <a class="button button-red" href="/ru/contact-us/">
+    Связаться с Haitu Casing →
+  </a>
+</section>
 </SiteLayout>
 
 <style>

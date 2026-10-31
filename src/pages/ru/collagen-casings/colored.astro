@@ -2,88 +2,93 @@
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 
 const product = {
-  title: 'Colored Collagen Casings',
+  title: 'Цветные коллагеновые оболочки',
   subtitle: '',
   image: '/images/collagen-casings-colored.jpg',
 };
 ---
 
 <SiteLayout
-  lang="en"
-  title="Colored Collagen Casings | Haitu Casing"
-  description="Colored collagen casings for sausage manufacturers seeking different product colors and visual presentations."
+  lang="ru"
+  title="Цветные коллагеновые оболочки | Haitu Casing"
+  description="Цветные коллагеновые оболочки для производителей колбасных изделий, которым важны разнообразие цветовых решений и привлекательный внешний вид готовой продукции."
 >
   <section class="page-intro product-page-intro">
-    <p class="eyebrow">
-      <a href="/en/collagen-casings/">Collagen Casings</a>
+  <p class="eyebrow">
+    <a href="/ru/collagen-casings/">Коллагеновые оболочки</a>
+  </p>
+  <h1>{product.title}</h1>
+</section>
+
+<section class="content-section product-overview">
+  <div class="product-image">
+    <img src={product.image} alt="Цветные коллагеновые оболочки" />
+  </div>
+
+  <div class="product-info">
+    <h2>Описание продукта</h2>
+    <p>
+      Цветные коллагеновые оболочки подходят для производства варёных
+      колбас и колбасных снеков, для которых важна стабильность цвета.
+      Цвет оболочки может быть подобран с учётом требований заказчика.
     </p>
-    <h1>{product.title}</h1>
-  </section>
 
-  <section class="content-section product-overview">
-    <div class="product-image">
-      <img src={product.image} alt="Colored Collagen Casings" />
-    </div>
+    <h2>Область применения</h2>
+    <p>
+      Сосиски, салями, полусухие колбасы, говяжьи колбасы,
+      колбасные снеки и другие виды колбасных изделий,
+      для которых требуется определённый цвет оболочки.
+    </p>
 
-    <div class="product-info">
-      <h2>Product Description</h2>
-      <p>
-        Colored Collagen Casings are Suitable for cooked and snack sausages that require stable coloring. Colors can be customized based on actual requirements.
-      </p>
+    <h2>Основные характеристики</h2>
+    <ul>
+      <li>Равномерная и стабильная окраска, низкий риск изменения цвета в процессе обработки.</li>
+      <li>Хорошее сохранение цвета готовой продукции при хранении.</li>
+      <li>Подходят для обработки паром, жарки во фритюре и производства колбасных снеков.</li>
+    </ul>
+  </div>
+</section>
 
-      <h2>Application</h2>
-      <p>
-        Frankfurters, salami, semi-dried salami, beef sausage, snack sticks and other products requiring color.
-      </p>
+<section class="content-section specifications">
+  <h2>Технические характеристики</h2>
 
-      <h2>Key Features</h2>
-      <ul>
-        <li>CUniform and stable coloring with low risk of fading during processing.</li>
-        <li>Finished products maintain color well during storage.</li>
-        <li>Suitable for steaming, deep frying and snack production processes.</li>
-      </ul>
-    </div>
-  </section>
+  <div class="spec-table-wrap">
+    <table class="spec-table">
+      <tbody>
+        <tr>
+          <th>Тип</th>
+          <td>Цветная коллагеновая оболочка</td>
+        </tr>
+        <tr>
+          <th>Цвета</th>
+          <td>Доступные варианты уточняются по запросу</td>
+        </tr>
+        <tr>
+          <th>Калибр</th>
+          <td>16 – 34 мм</td>
+        </tr>
+        <tr>
+          <th>Форма поставки</th>
+          <td>В гофрированных палочках (стандартная длина — 15 м/палочка)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <section class="content-section specifications">
-    <h2>Specifications</h2>
-
-    <div class="spec-table-wrap">
-      <table class="spec-table">
-        <tbody>
-          <tr>
-            <th>Type</th>
-            <td>Colored collagen casing</td>
-          </tr>
-          <tr>
-            <th>Colors</th>
-            <td>Available colors to be confirmed</td>
-          </tr>
-          <tr>
-            <th>Caliber</th>
-            <td>16 - 34 mm</td>
-          </tr>
-          <tr>
-            <th>Supply form</th>
-            <td>Shirred (standard 15 m/stick)</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="cta product-cta">
-    <div>
-      <h2>Looking for a specific casing color?</h2>
-      <p>
-        Tell us your target color, sausage type, caliber and processing
-        requirements so we can discuss available options.
-      </p>
-    </div>
-    <a class="button button-red" href="/en/contact-us/">
-      Contact Haitu Casing →
-    </a>
-  </section>
+<section class="cta product-cta">
+  <div>
+    <h2>Ищете оболочку определённого цвета?</h2>
+    <p>
+      Сообщите нам желаемый цвет, тип колбасных изделий,
+      калибр и требования к технологическому процессу,
+      чтобы мы могли подобрать подходящий вариант.
+    </p>
+  </div>
+  <a class="button button-red" href="/ru/contact-us/">
+    Связаться с Haitu Casing →
+  </a>
+</section>
 </SiteLayout>
 
 <style>

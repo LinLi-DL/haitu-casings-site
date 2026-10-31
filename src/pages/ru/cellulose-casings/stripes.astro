@@ -3,20 +3,20 @@
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 
 const product = {
-  title: 'Stripes Cellulose Casings',
+  title: 'Целлюлозные оболочки с полосками',
   subtitle: '',
   image: '/images/cellulose-casings-stripes.jpg',
 };
 ---
 
 <SiteLayout
-  lang="en"
-  title="Stripes Cellulose Casings | Haitu Casing"
-  description="Stripes cellulose casings for sausage products requiring a distinctive striped casing appearance."
+  lang="ru"
+  title="Целлюлозные оболочки с полосками | Haitu Casing"
+  description="Целлюлозные оболочки с цветными полосками для колбасных изделий, где требуется визуальная идентификация оболочки и контроль её снятия."
 >
   <section class="page-intro product-page-intro">
     <p class="eyebrow">
-      <a href="/en/cellulose-casings/">Cellulose Casings</a>
+      <a href="/ru/cellulose-casings/">Целлюлозные оболочки</a>
     </p>
     <h1>{product.title}</h1>
   </section>
@@ -25,56 +25,63 @@ const product = {
     <div class="product-image">
       <img
         src={product.image}
-        alt="Striped Cellulose Casings"
+        alt="Целлюлозные оболочки с полосками"
       />
     </div>
 
     <div class="product-info">
-      <h2>Product Description</h2>
+      <h2>Описание продукта</h2>
       <p>
-        Stripes Cellulose Casings feature visible stripes that help identify the casing during sausage processing and peeling. It can be used in applications where visual checking of casing removal is an important part of production.
+        Целлюлозные оболочки с полосками имеют хорошо заметную
+        маркировку, которая помогает идентифицировать оболочку
+        в процессе производства колбасных изделий и при её снятии.
+        Они могут использоваться в тех случаях, когда визуальный
+        контроль удаления оболочки является важной частью
+        производственного процесса.
       </p>
 
-      <h2>Application</h2>
+      <h2>Область применения</h2>
       <p>
-        Suitable for sausage production where visible stripe markings help identify the casing and check casing removal during peeling.
+        Подходят для производства колбасных изделий, где полоски
+        помогают распознавать оболочку и визуально контролировать
+        её снятие с готовой продукции.
       </p>
 
-      <h2>Key Features</h2>
+      <h2>Основные характеристики</h2>
       <ul>
-        <li>Visible Stripe Markings: Makes the casing easier to identify during processing.</li>
-        <li>Peeling Process Assistance: The markings can help operators visually check whether casing removal is complete.</li>
-        <li>Color Options: Stripe colors can be specified according to available product designs.</li>
-        <li>Production Identification: Supports visual differentiation between casing types or product batches where applicable.</li> 
+        <li>Заметная маркировка: облегчает визуальное распознавание оболочки в процессе производства.</li>
+        <li>Помощь при снятии оболочки: полоски позволяют оператору визуально оценить, полностью ли удалена оболочка.</li>
+        <li>Выбор цвета: цвет полосок может быть согласован в соответствии с доступными вариантами исполнения.</li>
+        <li>Идентификация продукции: маркировка может использоваться для визуального различения типов оболочек или партий продукции, если это предусмотрено технологией.</li>
       </ul>
     </div>
   </section>
 
   <section class="content-section specifications">
-    <h2>Specifications</h2>
+    <h2>Технические характеристики</h2>
 
     <div class="spec-table-wrap">
       <table class="spec-table">
         <tbody>
           <tr>
-            <th>Type</th>
-            <td>Cellulose casing</td>
+            <th>Тип</th>
+            <td>Целлюлозная оболочка</td>
           </tr>
           <tr>
-            <th>Appearance</th>
-            <td>Stripes</td>
+            <th>Внешний вид</th>
+            <td>С полосками</td>
           </tr>
           <tr>
-            <th>Caliber</th>
-            <td>Available upon request</td>
+            <th>Калибр</th>
+            <td>По запросу</td>
           </tr>
           <tr>
-            <th>Stripe design</th>
-            <td>Available designs to be confirmed</td>
+            <th>Дизайн полосок</th>
+            <td>Доступные варианты уточняются по запросу</td>
           </tr>
           <tr>
-            <th>Supply form</th>
-            <td>Shirred</td>
+            <th>Форма поставки</th>
+            <td>В гофрированных палочках</td>
           </tr>
         </tbody>
       </table>
@@ -83,14 +90,14 @@ const product = {
 
   <section class="cta product-cta">
     <div>
-      <h2>Need specifications or a quotation?</h2>
+      <h2>Нужны технические характеристики или расчёт стоимости?</h2>
       <p>
-        Tell us your sausage type, preferred stripe design, target
-        caliber and processing requirements.
+        Сообщите нам тип колбасных изделий, желаемый дизайн полосок,
+        требуемый калибр и особенности технологического процесса.
       </p>
     </div>
-    <a class="button button-red" href="/en/contact-us/">
-      Contact Haitu Casing →
+    <a class="button button-red" href="/ru/contact-us/">
+      Связаться с Haitu Casing →
     </a>
   </section>
 </SiteLayout>

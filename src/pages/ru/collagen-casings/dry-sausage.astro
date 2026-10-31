@@ -2,88 +2,92 @@
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 
 const product = {
-  title: 'Collagen Casings for Dry Sausages',
+  title: 'Коллагеновые оболочки для сухих колбас',
   subtitle: '',
   image: '/images/collagen-casings-dry.jpg',
 };
 ---
 
 <SiteLayout
-  lang="en"
-  title="Collagen Casings for Dry Sausages | Haitu Casing"
-  description="Collagen casings for dry sausage production, with options to discuss according to sausage style, caliber and drying process."
+  lang="ru"
+  title="Коллагеновые оболочки для сухих колбас | Haitu Casing"
+  description="Коллагеновые оболочки для производства сухих и полусухих колбас. Возможность подбора с учётом типа продукции, калибра и условий сушки."
 >
   <section class="page-intro product-page-intro">
-    <p class="eyebrow">
-      <a href="/en/collagen-casings/">Collagen Casings</a>
+  <p class="eyebrow">
+    <a href="/ru/collagen-casings/">Коллагеновые оболочки</a>
+  </p>
+  <h1>{product.title}</h1>
+</section>
+
+<section class="content-section product-overview">
+  <div class="product-image">
+    <img src={product.image} alt="Коллагеновые оболочки для сухих колбас" />
+  </div>
+
+  <div class="product-info">
+    <h2>Описание продукта</h2>
+    <p>
+      Коллагеновые оболочки для сухих колбас предназначены
+      для производства сухих и полусухих колбас в качестве
+      альтернативы натуральным оболочкам. Они отличаются
+      хорошей прозрачностью и придают готовым изделиям
+      привлекательный естественный блеск.
     </p>
-    <h1>{product.title}</h1>
-  </section>
 
-  <section class="content-section product-overview">
-    <div class="product-image">
-      <img src={product.image} alt="Collagen Casings for Dry Sausages" />
-    </div>
+    <h2>Область применения</h2>
+    <p>
+      Салями, полусухие колбасы, сыровяленые и сырокопчёные
+      колбасы, сухие колбасные снеки, мини-колбаски
+      и аналогичная продукция.
+    </p>
 
-    <div class="product-info">
-      <h2>Product Description</h2>
-      <p>
-        Collagen Casings for Dry Sausages are designed for dry and semi-dry sausages 
-        as an alternative to natural casings, offering good transparency and finished product gloss.
-      </p>
+    <h2>Основные характеристики</h2>
+    <ul>
+      <li>Стабильный контроль калибра.</li>
+      <li>Совместимость с различными типами шприцовочных машин, в том числе для высокоскоростного производства.</li>
+      <li>Высокая прозрачность и естественный блеск готовой колбасы.</li>
+      <li>Приятные ощущения при употреблении и удобство в еде.</li>
+      <li>Подходят для обработки паром, приготовления на гриле и умеренного нагрева.</li>
+    </ul>
+  </div>
+</section>
 
-      <h2>Application</h2>
-      <p>
-        Salami, semi-dry sausages, dry-cured sausages, 
-        snack dry sausages, mini dry sausages and similar products.
-      </p>
+<section class="content-section specifications">
+  <h2>Технические характеристики</h2>
 
-      <h2>Key Features</h2>
-      <ul>
-        <li>Stable caliber control.</li>
-        <li>Compatible with various stuffing machines for higher-speed production.</li>
-        <li>High transparency with natural glossy appearance of the finished sausage.</li>
-        <li>Smooth mouthfeel and easy to eat.</li>
-        <li>Suitable for steaming, grilling and light heating processes.</li>
-      </ul>
-    </div>
-  </section>
+  <div class="spec-table-wrap">
+    <table class="spec-table">
+      <tbody>
+        <tr>
+          <th>Тип</th>
+          <td>Коллагеновая оболочка для сухих колбас</td>
+        </tr>
+        <tr>
+          <th>Калибр</th>
+          <td>10 – 50 мм</td>
+        </tr>
+        <tr>
+          <th>Форма поставки</th>
+          <td>В гофрированных палочках</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <section class="content-section specifications">
-    <h2>Specifications</h2>
-
-    <div class="spec-table-wrap">
-      <table class="spec-table">
-        <tbody>
-          <tr>
-            <th>Type</th>
-            <td>Dry sausage collagen casing</td>
-          </tr>
-          <tr>
-            <th>Caliber</th>
-            <td>10 - 50 mm</td>
-          </tr>
-          <tr>
-            <th>Supply form</th>
-            <td>Shirred</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="cta product-cta">
-    <div>
-      <h2>Need specifications or a quotation?</h2>
-      <p>
-        Share your sausage type, target caliber, drying conditions
-        and expected product characteristics.
-      </p>
-    </div>
-    <a class="button button-red" href="/en/contact-us/">
-      Contact Haitu Casing →
-    </a>
-  </section>
+<section class="cta product-cta">
+  <div>
+    <h2>Нужны технические характеристики или расчёт стоимости?</h2>
+    <p>
+      Сообщите нам тип колбасных изделий, требуемый калибр,
+      условия сушки и желаемые характеристики готовой продукции.
+    </p>
+  </div>
+  <a class="button button-red" href="/ru/contact-us/">
+    Связаться с Haitu Casing →
+  </a>
+</section>
 </SiteLayout>
 
 <style>
