@@ -1,22 +1,21 @@
-
 ---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 
 const product = {
-  title: 'HT Glossy Casing for Large-Caliber Sausages',
-  subtitle: 'High-Barrier Polymer Casing',
+  title: 'Глянцевая оболочка HT большого калибра',
+  subtitle: 'Высокобарьерная полимерная оболочка',
   image: '/images/ht-glossy-barrier.jpg',
 };
 ---
 
 <SiteLayout
-  lang="en"
-  title="HT Glossy Casing for Large-Caliber Sausages | Haitu Casing"
-  description="High-barrier polymer casing for cooked sausages, ham, liver sausages and pâtés, helping maintain product quality during storage."
+  lang="ru"
+  title="Глянцевая оболочка HT большого калибра | Haitu Casing"
+  description="Высокобарьерная полимерная оболочка для варёных колбас, ветчины, печёночных колбас и паштетов, помогающая сохранять качество продукции при хранении."
 >
   <section class="page-intro product-page-intro">
     <p class="eyebrow">
-      <a href="/en/plastic-casings/">Plastic Casings</a>
+      <a href="/ru/plastic-casings/">Пластиковые оболочки</a>
     </p>
     <h1>{product.title}</h1>
   </section>
@@ -25,70 +24,74 @@ const product = {
     <div class="product-image">
       <img
         src={product.image}
-        alt="HT Glossy Casing for Large-Caliber Sausages"
+        alt="Глянцевая оболочка HT большого калибра"
       />
     </div>
 
     <div class="product-info">
-      <h2>Product Description</h2>
+      <h2>Описание продукта</h2>
       <p>
-        HT Glossy Casing for Large-Caliber Sausages is a high-barrier polymer casing designed to help
-        maintain product quality during storage. It offers good mechanical
-        strength, stable caliber and reliable shrinkage.
+        Глянцевая оболочка HT большого калибра — это высокобарьерная
+        полимерная оболочка, разработанная для сохранения качества
+        колбасных изделий при хранении. Она обладает хорошей
+        механической прочностью, стабильностью калибра и
+        предсказуемой усадкой.
       </p>
 
-      <h2>Application</h2>
+      <h2>Область применения</h2>
       <p>
-        Cooked sausages, ham, liver sausages and pâtés.
+        Варёные колбасы, ветчина, печёночные колбасы и паштеты.
       </p>
 
-      <h2>Key Features</h2>
+      <h2>Основные характеристики</h2>
       <ul>
         <li>
-          High barrier against oxygen and moisture to help maintain
-          product quality during storage.
+          Высокие барьерные свойства по отношению к кислороду
+          и влаге помогают сохранять качество продукции при хранении.
         </li>
         <li>
-          Good mechanical strength for high-speed and semi-automatic
-          processing equipment.
+          Хорошая механическая прочность обеспечивает возможность
+          использования на высокоскоростных и полуавтоматических
+          производственных линиях.
         </li>
         <li>
-          Stable caliber and reliable shrinkage.
+          Стабильный калибр и предсказуемая усадка.
         </li>
         <li>
-          Suitable for standard heat treatment and pasteurization.
+          Подходит для стандартной термической обработки
+          и пастеризации.
         </li>
         <li>
-          Multi-color printing available, up to 12 colors.
+          Доступна многоцветная печать — до 12 цветов.
         </li>
       </ul>
     </div>
   </section>
 
   <section class="content-section specifications">
-    <h2>Specifications</h2>
+    <h2>Технические характеристики</h2>
     <div class="spec-table-wrap">
       <table class="spec-table">
         <tbody>
           <tr>
-            <th>Flat width</th>
-            <td>30 – 300 mm</td>
+            <th>Калибр</th>
+            <td>30 – 300 мм</td>
           </tr>
           <tr>
-            <th>Type</th>
-            <td>High-barrier</td>
+            <th>Тип</th>
+            <td>Высокобарьерная</td>
           </tr>
           <tr>
-            <th>Colors</th>
-            <td>Clear, smoked and colored options</td>
+            <th>Цвета</th>
+            <td>Прозрачная, дымчатая и другие цветные варианты</td>
           </tr>
           <tr>
-            <th>Printing</th>
-            <td>Up to 12 colors</td>
+            <th>Печать</th>
+            <td>До 12 цветов</td>
           </tr>
           <tr>
-            <th>Supply form</th>
-            <td>Shirred sticks or rolls</td>
+            <th>Форма поставки</th>
+            <td>В гофрированных палочках или рулонах</td>
           </tr>
         </tbody>
       </table>
@@ -97,17 +100,242 @@ const product = {
 
   <section class="cta product-cta">
     <div>
-      <h2>Need specifications or a quotation?</h2>
+      <h2>Нужны технические характеристики или расчёт стоимости?</h2>
       <p>
-        Tell us your sausage type, target caliber, color, printing
-        and supply requirements.
+        Сообщите нам тип колбасных изделий, требуемый калибр,
+        цвет, параметры печати и предпочтительную форму поставки.
       </p>
     </div>
-    <a class="button button-red" href="/en/contact-us/">
-      Contact Haitu Casing →
+    <a class="button button-red" href="/ru/contact-us/">
+      Связаться с Haitu Casing →
     </a>
   </section>
 </SiteLayout>
+
+<style>
+  .product-intro .eyebrow a {
+    color: var(--red);
+  }
+
+  .product-intro .product-subtitle {
+    margin-top: 8px;
+  }
+
+  .product-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 36px;
+    align-items: start;
+    max-width: 1280px;
+  }
+
+  .product-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .product-info h2,
+  .specifications h2 {
+    margin: 0 0 12px;
+    color: var(--navy);
+    font-size: clamp(21px, 2vw, 27px);
+  }
+
+  .product-info h2:not(:first-child) {
+    margin-top: 24px;
+  }
+
+  .product-info p,
+  .product-info ul,
+  .product-cta p {
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .product-info ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .product-info li + li {
+    margin-top: 6px;
+  }
+
+  .specifications {
+    max-width: 900px;
+    padding-top: 12px;
+  }
+
+  .spec-table-wrap {
+    overflow-x: auto;
+  }
+
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--line);
+  }
+
+  .spec-table th,
+  .spec-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .spec-table th {
+    width: 32%;
+    color: var(--navy);
+    background: #f8f8f6;
+    font-weight: 600;
+  }
+
+  .spec-table td {
+    color: var(--muted);
+  }
+
+  .spec-table tr:last-child th,
+  .spec-table tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .product-cta {
+    margin-top: 28px;
+  }
+
+  @media (max-width: 720px) {
+    .product-overview {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .product-image img {
+      max-height: 480px;
+      object-fit: contain;
+    }
+
+    .spec-table th,
+    .spec-table td {
+      padding: 10px 12px;
+    }
+  }
+</style>
+
+<style>
+  .product-intro .eyebrow a {
+    color: var(--red);
+  }
+
+  .product-intro .product-subtitle {
+    margin-top: 8px;
+  }
+
+  .product-overview {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 36px;
+    align-items: start;
+    max-width: 1280px;
+  }
+
+  .product-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .product-info h2,
+  .specifications h2 {
+    margin: 0 0 12px;
+    color: var(--navy);
+    font-size: clamp(21px, 2vw, 27px);
+  }
+
+  .product-info h2:not(:first-child) {
+    margin-top: 24px;
+  }
+
+  .product-info p,
+  .product-info ul,
+  .product-cta p {
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .product-info ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .product-info li + li {
+    margin-top: 6px;
+  }
+
+  .specifications {
+    max-width: 900px;
+    padding-top: 12px;
+  }
+
+  .spec-table-wrap {
+    overflow-x: auto;
+  }
+
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--line);
+  }
+
+  .spec-table th,
+  .spec-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .spec-table th {
+    width: 32%;
+    color: var(--navy);
+    background: #f8f8f6;
+    font-weight: 600;
+  }
+
+  .spec-table td {
+    color: var(--muted);
+  }
+
+  .spec-table tr:last-child th,
+  .spec-table tr:last-child td {
+    border-bottom: 0;
+  }
+
+  .product-cta {
+    margin-top: 28px;
+  }
+
+  @media (max-width: 720px) {
+    .product-overview {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .product-image img {
+      max-height: 480px;
+      object-fit: contain;
+    }
+
+    .spec-table th,
+    .spec-table td {
+      padding: 10px 12px;
+    }
+  }
+</style>
+
 
 <style>
   .product-intro .eyebrow a {

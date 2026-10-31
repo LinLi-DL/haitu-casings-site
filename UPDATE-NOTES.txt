@@ -3,7 +3,7 @@ Haitu Casing website update notes
 1. Homepage
 - Updated the three hero slides to emphasize producing and providing, specialty polyamide casings, and international supply experience.
 - Improved hero title sizing, text width, background image fitting and mobile typography to reduce awkward title wrapping.
-- Updated the four homepage advantages and About Haitu summary to emphasize production resources, smoke-permeable casings, high-barrier matte and printed options, technical/application-focused support, and trade experience in Russia, Central Asia and North America.
+- Updated the four homepage advantages and About Haitu summary to emphasize production facilities, smoke-permeable casings, high-barrier matte and printed options, technical/application-focused support, and trade experience in Russia, Central Asia and North America.
 - Fixed product category descriptions on the English homepage to read the `description` field from src/data/products.ts (instead of the non-existent `text` field).
 
 2. Page organization
@@ -14,7 +14,7 @@ Haitu Casing website update notes
 - Moved old duplicate homepage drafts out of src/pages into archive/homepage-drafts so Astro will not publish them as active routes.
 
 3. Content
-- Expanded About Haitu with production resources, product focus, application-oriented support, international trade and direct links to casing categories.
+- Expanded About Haitu with production facilities, product focus, application-oriented support, international trade and direct links to casing categories.
 - Reworked collagen, cellulose, fibrous and equipment category pages to be useful without inventing unverified models or technical specifications.
 - Improved the polyamide category introduction and aligned it with smoke-permeable, high-barrier matte and printed casing positioning.
 - Updated the English contact page to use sales07@haitucasing.com and the current WhatsApp contact.
